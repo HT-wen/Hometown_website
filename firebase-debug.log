@@ -1,0 +1,122 @@
+[debug] [2025-06-26T20:19:50.142Z] ----------------------------------------------------------------------
+[debug] [2025-06-26T20:19:50.146Z] Command:       /Users/wenwen/.nvm/versions/node/v22.17.0/bin/node /Users/wenwen/.nvm/versions/node/v22.17.0/bin/firebase init hosting
+[debug] [2025-06-26T20:19:50.146Z] CLI Version:   14.8.0
+[debug] [2025-06-26T20:19:50.147Z] Platform:      darwin
+[debug] [2025-06-26T20:19:50.147Z] Node Version:  v22.17.0
+[debug] [2025-06-26T20:19:50.147Z] Time:          Thu Jun 26 2025 15:19:50 GMT-0500 (Central Daylight Time)
+[debug] [2025-06-26T20:19:50.147Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-26T20:19:50.217Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-26T20:19:50.217Z] > authorizing via signed-in user (hometownmarket888@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/wenwen/Desktop/Hometown_website
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-06-26T20:19:50.218Z] Using project from CLI flag: hometown-website-8de8c
+[debug] [2025-06-26T20:19:50.219Z] Checked if tokens are valid: true, expires at: 1750971127504
+[debug] [2025-06-26T20:19:50.219Z] Checked if tokens are valid: true, expires at: 1750971127504
+[debug] [2025-06-26T20:19:50.219Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c [none]
+[debug] [2025-06-26T20:19:50.645Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c 200
+[debug] [2025-06-26T20:19:50.645Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c {"projectId":"hometown-website-8de8c","projectNumber":"934011795850","displayName":"Hometown Website","name":"projects/hometown-website-8de8c","resources":{"hostingSite":"hometown-website-8de8c"},"state":"ACTIVE","etag":"1_68a9b569-5493-48a3-869d-481f8d74416f"}
+[info] i  Using project hometown-website-8de8c (Hometown Website) 
+[info] 
+=== Hosting Setup
+[debug] [2025-06-26T20:19:50.656Z] Checked if tokens are valid: true, expires at: 1750971127504
+[debug] [2025-06-26T20:19:50.657Z] Checked if tokens are valid: true, expires at: 1750971127504
+[debug] [2025-06-26T20:19:50.657Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c [none]
+[debug] [2025-06-26T20:19:50.914Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c 200
+[debug] [2025-06-26T20:19:50.914Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c {"projectId":"hometown-website-8de8c","projectNumber":"934011795850","displayName":"Hometown Website","name":"projects/hometown-website-8de8c","resources":{"hostingSite":"hometown-website-8de8c"},"state":"ACTIVE","etag":"1_68a9b569-5493-48a3-869d-481f8d74416f"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-06-26T20:20:14.619Z] Error: EROFS: read-only file system, open '//404.html'
+    at Object.writeFileSync (node:fs:2425:20)
+    at Object.createFileSync (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/node_modules/fs-extra/lib/ensure/file.js:63:6)
+    at Config.writeProjectFile (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/config.js:160:12)
+    at Config.askWriteProjectFile (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/config.js:208:14)
+    at async Object.doSetup (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/init/features/hosting/index.js:153:13)
+    at async init (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/init/index.js:57:13)
+    at async Command.initAction [as actionFn] (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/commands/init.js:198:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-06-26T20:21:40.090Z] ----------------------------------------------------------------------
+[debug] [2025-06-26T20:21:40.091Z] Command:       /Users/wenwen/.nvm/versions/node/v22.17.0/bin/node /Users/wenwen/.nvm/versions/node/v22.17.0/bin/firebase init hosting
+[debug] [2025-06-26T20:21:40.094Z] CLI Version:   14.8.0
+[debug] [2025-06-26T20:21:40.094Z] Platform:      darwin
+[debug] [2025-06-26T20:21:40.094Z] Node Version:  v22.17.0
+[debug] [2025-06-26T20:21:40.095Z] Time:          Thu Jun 26 2025 15:21:40 GMT-0500 (Central Daylight Time)
+[debug] [2025-06-26T20:21:40.095Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-26T20:21:40.167Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-26T20:21:40.167Z] > authorizing via signed-in user (hometownmarket888@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/wenwen/Desktop/Hometown_website
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-06-26T20:21:40.168Z] Using project from CLI flag: hometown-website-8de8c
+[debug] [2025-06-26T20:21:40.168Z] Checked if tokens are valid: true, expires at: 1750971127504
+[debug] [2025-06-26T20:21:40.168Z] Checked if tokens are valid: true, expires at: 1750971127504
+[debug] [2025-06-26T20:21:40.169Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c [none]
+[debug] [2025-06-26T20:21:40.623Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c 200
+[debug] [2025-06-26T20:21:40.623Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c {"projectId":"hometown-website-8de8c","projectNumber":"934011795850","displayName":"Hometown Website","name":"projects/hometown-website-8de8c","resources":{"hostingSite":"hometown-website-8de8c"},"state":"ACTIVE","etag":"1_68a9b569-5493-48a3-869d-481f8d74416f"}
+[info] i  Using project hometown-website-8de8c (Hometown Website) 
+[info] 
+=== Hosting Setup
+[debug] [2025-06-26T20:21:40.632Z] Checked if tokens are valid: true, expires at: 1750971127504
+[debug] [2025-06-26T20:21:40.632Z] Checked if tokens are valid: true, expires at: 1750971127504
+[debug] [2025-06-26T20:21:40.632Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c [none]
+[debug] [2025-06-26T20:21:40.844Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c 200
+[debug] [2025-06-26T20:21:40.844Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hometown-website-8de8c {"projectId":"hometown-website-8de8c","projectNumber":"934011795850","displayName":"Hometown Website","name":"projects/hometown-website-8de8c","resources":{"hostingSite":"hometown-website-8de8c"},"state":"ACTIVE","etag":"1_68a9b569-5493-48a3-869d-481f8d74416f"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-06-26T20:22:23.770Z] Error: EROFS: read-only file system, open '//404.html'
+    at Object.writeFileSync (node:fs:2425:20)
+    at Object.createFileSync (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/node_modules/fs-extra/lib/ensure/file.js:63:6)
+    at Config.writeProjectFile (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/config.js:160:12)
+    at Config.askWriteProjectFile (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/config.js:208:14)
+    at async Object.doSetup (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/init/features/hosting/index.js:153:13)
+    at async init (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/init/index.js:57:13)
+    at async Command.initAction [as actionFn] (/Users/wenwen/.nvm/versions/node/v22.17.0/lib/node_modules/firebase-tools/lib/commands/init.js:198:5)
+[error] 
+[error] Error: An unexpected error has occurred.
