@@ -1,0 +1,408 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+    background-color: #3a7d44; /* Same green as Our Story */
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header .logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+header .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header .menu a:hover {
+    background-color: #2c5c34;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+.welcome-text {
+    background: linear-gradient(90deg, #4CAF50, #FF5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem; /* Adjust size as needed */
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+.welcome-subtext {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+.welcome-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Video Section */
+.video-section {
+    width: 100vw; /* Full width of the viewport */
+    margin-left: calc(-50vw + 50%); /* Center alignment */
+    position: relative;
+    z-index: 1;
+    max-height: 300px; /* Set maximum height */
+    overflow: hidden; /* Ensure it doesn’t overflow */
+}
+
+.video-section video {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures it covers the container */
+    max-height: 350px; /* Match the container height */
+}
+
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    color: #3a7d44;
+}
+
+/* Events Section */
+/* New Arrivals Section */
+.new-arrivals-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Wrapper for scroll container and buttons */
+.scroll-container-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Scroll Container */
+.scroll-container {
+    overflow: hidden; /* Hide overflow */
+    width: 80%; /* Adjust width to fit inside the wrapper */
+    display: flex;
+    align-items: center;
+}
+
+/* New Arrivals Section */
+.new-arrivals-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Wrapper for scroll container and buttons */
+.scroll-container-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Scroll Container */
+.scroll-container {
+    overflow: hidden; /* Hide overflow */
+    width: 80%; /* Adjust width to fit inside the wrapper */
+    display: flex;
+    align-items: center;
+}
+
+/* New Arrivals Slider */
+.new-arrivals-slider {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
+/* Product Card */
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 220px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card .brand {
+    font-size: 14px;
+    color: #4CAF50;
+    margin-bottom: 5px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Scroll Buttons */
+.scroll-button {
+    background-color: #FFF;
+    color: #4CAF50;
+    border: none;
+    padding: 12px; /* Adjust the padding for a larger button */
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px; /* Adjust the font size */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-button.left {
+    left: 5px; /* Adjust as needed */
+}
+
+.scroll-button.right {
+    right: 5px; /* Adjust as needed */
+}
+
+.scroll-button:hover {
+    background-color: #388E3C;
+}
+
+/* Hide scrollbar but allow scrolling */
+.new-arrivals-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.new-arrivals-slider {
+    -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none;  /* For Firefox */
+}
+/* Ensure better responsiveness for mobile */
+@media (max-width: 768px) {
+    .product-card {
+        width: 90%; /* Reduce width to fit mobile view */
+        margin: 10px auto; /* Center the card */
+        text-align: left; /* Align text properly */
+    }
+
+    .product-card h3 {
+        font-size: 16px;
+        text-align: center; /* Center-align the title */
+        margin-top: 10px;
+    }
+
+    .product-card p {
+        font-size: 14px; /* Slightly reduce the text size */
+        margin-bottom: 10px;
+        line-height: 1.5; /* Ensure good readability */
+    }
+
+    .product-card img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 8px; /* Maintain a smooth look */
+    }
+
+    .scroll-container-wrapper {
+        width: 100%;
+    }
+
+    .scroll-button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .scroll-button.left {
+        left: 5px;
+    }
+
+    .scroll-button.right {
+        right: 5px;
+    }
+
+    .product-card {
+        width: 180px;
+    }
+
+    .scroll-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .right-section{
+        margin-right: 0 !important;
+    }
+    .content h2{
+        font-size: 32px !important;
+        line-height: 38px !important;
+    }
+    .content p{
+        font-size: 16px !important;
+    }
+    .product-card h3{
+        font-size: 12px;
+    }
+    .for_dekstop{
+        display: none;
+    }
+    .menu-items a span:nth-of-type(1){
+        margin-right: 10px;
+    }
+   
+}
+/* Gallery Section */
+.gallery-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Increased spacing for better layout */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Gallery Item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    height: 200px; /* Consistent height for all items */
+}
+
+/* Gallery Images */
+.gallery-item img {
+    width: 100%; /* Ensure the image fills the container width */
+    height: 100%; /* Ensure the image fills the container height */
+    object-fit: cover; /* Crop and scale the image to maintain aspect ratio */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+}
+
+/* Hover Effects for Images */
+.gallery-item img:hover {
+    transform: scale(1.1); /* Zoom effect */
+    opacity: 0.8; /* Slightly dim the image */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
+    }
+
+    .gallery-section h2 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+    
+    .gallery-item {
+        height: 150px; /* Reduce height for smaller screens */
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background-color: #3a7d44;
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9rem; /* Adjust footer text size for mobile */
+}

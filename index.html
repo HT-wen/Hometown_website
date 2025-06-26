@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/Hometown logo.png" type="image/x-icon">
+    <title>Hometown Supermarket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+          <!-- -------FontAwesome Link------- -->
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+</head>
+<body onload="switchLanguage('en')">
+
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="left-section">
+            <div class="mobile_show">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <img src="Images/Hometown logo.png" alt="Hometown Logo" class="logo">
+            <h1 class="lang en title-main">Hometown Supermarket</h1>
+            <h1 class="lang zh" style="display:none;">家乡超市</h1>
+        </div>
+
+        <div class="search-bar-container">
+            <input type="text" class="search-bar" id="search-bar" placeholder="Search for products, categories, and more" onfocus="showSearchResults()" onblur="hideSearchResults()">
+            <div class="search_results_box mobile_hide">
+                <div class="Item">
+                    <h2>Categories</h2>
+                    <div class="grid">
+                        <div class="col">
+                            <a href="meat.html">
+                                <div class="Img">
+                                <img src="Images/latinamericanbanner.png" alt="">
+                            </div>
+                            <h2>Meat</h2>
+                            </a>
+                        </div>
+
+                        <div class="col">
+                            <a href="frozen.html">
+                                <div class="Img">
+                                <img src="Images/frozen.png" alt="">
+                            </div>
+                            <h2>Frozen</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/sauces.png" alt="">
+                            </div>
+                            <h2>Sauces</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="grains.html">
+                                <div class="Img">
+                                <img src="Images/rice.png" alt="">
+                            </div>
+                            <h2>Rice</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="beverages.html">
+                                <div class="Img">
+                                <img src="Images/soft-drink.png">
+                            </div>
+                            <h2>Beverages</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="snacks.html">
+                                <div class="Img">
+                                <img src="Images/snack.png" alt="">
+                            </div>
+                            <h2>Snack</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/vegetables.png" alt="">
+                            </div>
+                            <h2>Vegetables</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/Ramen.png" alt="">
+                            </div>
+                            <h2>Ramen</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="Item">
+                    <div class="grid">
+                        <div class="col">
+                            <a href="cannedfood.html">
+                                <div class="Img">
+                                <img src="Images/canned-food.png" alt="">
+                            </div>
+                            <h2>Basket</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/seafood.png" alt="">
+                            </div>
+                            <h2>Seafood</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="right-section">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('zh')">中文</button>
+        </div>
+    </div>
+    <!-- Mobile Show -->
+    <div class="mobile_search_box">
+        <input type="text" class="search-bar mobile_search_bar" placeholder="Search for products" onfocus="showSearchResults()" onblur="hideSearchResults()">
+        <i class="fa-solid fa-search"></i>
+
+        <div class="search_results_box mobile_search_results">
+            <div class="Item">
+                <h2>Categories</h2>
+                <div class="grid">
+                    <div class="col">
+                        <a href="meat.html">
+                            <div class="Img">
+                            <img src="Images/meat.png" alt="">
+                        </div>
+                        <h2>Meat</h2>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="frozen.html">
+                            <div class="Img">
+                            <img src="Images/frozen.png" alt="">
+                        </div>
+                        <h2>Frozen</h2>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="sauces.html">
+                            <div class="Img">
+                            <img src="Images/sauces.png" alt="">
+                        </div>
+                        <h2>Sauces</h2>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="grains.html">
+                            <div class="Img">
+                            <img src="Images/rice.png" alt="">
+                        </div>
+                        <h2>Rice</h2>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="beverages.html">
+                            <div class="Img">
+                            <img src="Images/soft-drink.png">
+                        </div>
+                        <h2>Soft drink</h2>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="snacks.html">
+                            <div class="Img">
+                            <img src="Images/snack.png" alt="">
+                        </div>
+                        <h2>Snack</h2>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="produce.html">
+                            <div class="Img">
+                            <img src="Images/vegetables.png" alt="">
+                        </div>
+                        <h2>Vegetables</h2>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="ramen.html">
+                            <div class="Img">
+                            <img src="Images/Ramen.png" alt="">
+                        </div>
+                        <h2>Ramen</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="Item">
+                <div class="grid">
+                    <div class="col">
+                        <a href="produce.html">
+                            <div class="Img">
+                            <img src="Images/basket.png" alt="">
+                        </div>
+                        <h2>Basket</h2>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="seafood.html">
+                            <div class="Img">
+                            <img src="Images/seafood.png" alt="">
+                        </div>
+                        <h2>Seafood</h2>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="produce.html">
+                            <div class="Img">
+                            <img src="Images/Subject.png" alt="">
+                        </div>
+                        <h2>Subject</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Results Section -->
+    <div class="search-results hide" id="search-results">
+        <div class="category-section">
+            <div class="icon">
+                <a href="produce.html">
+                    <img src="Images/vegetables.png" alt="Produce">
+                    <p>Produce</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="meat.html">
+                    <img src="Images/meat.png" alt="Meat">
+                    <p>Meat</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="ramen.html">
+                    <img src="Images/Ramen.png" alt="Ramen">
+                    <p>Ramen</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="seafood.html">
+                    <img src="Images/seafood.png" alt="Seafood">
+                    <p>Seafood</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="beverages.html">
+                    <img src="Images/soft-drink.png" alt="Beverages">
+                    <p>Beverages</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="snacks.html">
+                    <img src="Images/snack.png" alt="Snacks">
+                    <p>Snacks</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="frozen.html">
+                    <img src="Images/frozen.png" alt="Frozen">
+                    <p>Frozen</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="sauces.html">
+                    <img src="Images/sauces.png" alt="Sauces">
+                    <p>Sauces</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="alcohol.html">
+                    <img src="Images/alcohol.png" alt="Alcohol">
+                    <p>Alcohol</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Navigation Bar -->
+<div class="nav-bar">
+    <div class="menu-items">
+        <i class="fa-solid fa-xmark" id="xmark"></i>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">
+                <span>&#9776;</span> 
+                <span class="lang en">Categories</span>
+                <span class="lang zh" style="display:none;">分类</span>
+            </a>
+            <div class="dropdown-content">
+                <a href="produce.html"><span class="lang en">Produce</span><span class="lang zh" style="display:none;">农产品</span></a>
+                <a href="seafood.html"><span class="lang en">Seafood</span><span class="lang zh" style="display:none;">海鲜</span></a>
+                <a href="frozen.html"><span class="lang en">Frozen</span><span class="lang zh" style="display:none;">冷冻</span></a>
+                <a href="cannedfood.html"><span class="lang en">Canned-Food</span><span class="lang zh" style="display:none;">饮料</span></a>
+                <a href="meat.html"><span class="lang en">Meat</span><span class="lang zh" style="display:none;">肉类</span></a>
+                <a href="ramen.html"><span class="lang en">Noodles</span><span class="lang zh" style="display:none;">面条</span></a>
+                <a href="beverages.html"><span class="lang en">Beverages</span><span class="lang zh" style="display:none;">饮料</span></a>
+                <a href="sauces.html"><span class="lang en">Sauces</span><span class="lang zh" style="display:none;">酱料</span></a>
+                <a href="snacks.html"><span class="lang en">Snacks</span><span class="lang zh" style="display:none;">零食</span></a>
+                <a href="alcohol.html"><span class="lang en">Alcohol</span><span class="lang zh" style="display:none;">酒类</span></a>
+            </div>
+        </div>
+        <a href="restaurant.html"><span class="lang en">Restaurant</span><span class="lang zh" style="display:none;">餐厅</span></a>
+        <a href="#new-arrivals"><span class="lang en">New Arrivals</span><span class="lang zh" style="display:none;">新品</span></a>
+        <a href="deals.html"><span class="lang en">Deals</span><span class="lang zh" style="display:none;">优惠</span></a>
+        <a href="communitycenter.html"><span class="lang en">Community Center</span><span class="lang zh" style="display:none;">社区中心</span></a>
+        <a href="ourstory.html"><span class="lang en">Our Story</span><span class="lang zh" style="display:none;">我们的故事</span></a>
+        <a href="storefinder.html"><span class="lang en">Store Finder</span><span class="lang zh" style="display:none;">门店查询</span></a>
+    </div>
+</div>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav">
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="mobileMenu">
+        <a href="#" class="menu-item">Categories</a>
+        <div class="submenu">
+            <a href="produce.html" class="submenu-item">Produce</a>
+            <a href="seafood.html" class="submenu-item">Seafood</a>
+            <a href="frozen.html" class="submenu-item">Frozen</a>
+            <a href="meat.html" class="submenu-item">Meat</a>
+            <a href="ramen.html" class="submenu-item">Noodles</a>
+            <a href="beverages.html" class="submenu-item">Beverages</a>
+            <a href="sauces.html" class="submenu-item">Sauces</a>
+            <a href="snacks.html" class="submenu-item">Snacks</a>
+            <a href="alcohol.html" class="submenu-item">Alcohol</a>
+        </div>
+        <a href="restaurant.html" class="menu-item">Restaurant</a>
+        <a href="#new-arrivals" class="menu-item">New Arrivals</a>
+        <a href="deals.html" class="menu-item">Deals</a>
+        <a href="communitycenter.html" class="menu-item">Community Center</a>
+        <a href="ourstory.html" class="menu-item">Our Story</a>
+        <a href="storefinder.html" class="menu-item">Store Finder</a>
+    </div>
+</div>
+
+
+
+    <!-- Video Section -->
+    <div class="video-section">
+        <video autoplay loop muted playsinline>
+            <source src="COVER.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Supermarket Content -->
+    <div class="content">
+        <h2 class="lang en welcome-text">Welcome to Hometown Supermarket</h2>
+        <h2 class="lang zh" style="display:none;">欢迎来到家乡超市</h2>
+        <p class="lang en welcome-subtext">Shop for groceries, fresh produce, and more!</p>
+        <p class="lang zh" style="display:none;">购买杂货、新鲜农产品等！</p>
+    </div>
+
+    <!-- Category Scroll Section -->
+    <!-- Category Scroll Section -->
+    <div class="category-scroll-container">
+        <button class="scroll-button left" onclick="scrollCategoryLeft()">&#8249;</button>
+        <div class="category-icons" id="categoryIcons">
+            <div class="icon">
+                <a href="produce.html">
+                    <img src="Images/vegetables.png" alt="Category 1">
+                </a>
+                <p>Produce</p>
+            </div>
+            <div class="icon">
+                <a href="meat.html">
+                    <img src="Images/meat.png" alt="Category 2">
+                </a>
+                <p>Meat</p>
+            </div>
+            <div class="icon">
+                <a href="seafood.html">
+                    <img src="Images/seafood.png" alt="Category 4">
+                </a>
+                <p>Seafood</p>
+            </div>
+            <div class="icon">
+                <a href="ramen.html">
+                    <img src="Images/Ramen.png" alt="Category 3">
+                </a>
+                <p>Ramen</p>
+            </div>
+            <div class="icon">
+                <a href="dairy.html">
+                    <img src="Images/milk.png" alt="Milk">
+                </a>
+                <p>Dairy</p>
+            </div>
+            <div class="icon">
+                <a href="beverages.html">
+                    <img src="Images/soft-drink.png" alt="Category 5">
+                </a>
+                <p>Beverages</p>
+            </div>
+            <div class="icon">
+                <a href="snacks.html">
+                    <img src="Images/snack.png" alt="Category 6">
+                </a>
+                <p>Snacks</p>
+            </div>
+            <div class="icon">
+                <a href="frozen.html">
+                    <img src="Images/frozen.png" alt="Frozen">
+                </a>
+                <p>Frozen</p>
+            </div>
+            <div class="icon">
+                <a href="cannedfood.html">
+                    <img src="Images/canned-food.png" alt="Frozen">
+                </a>
+                <p>Canned</p>
+            </div>
+            <div class="icon">
+                <a href="sauces.html">
+                    <img src="Images/sauces.png" alt="Sauces">
+                </a>
+                <p>Sauces</p>
+            </div>
+            <div class="icon">
+                <a href="alcohol.html">
+                    <img src="Images/alcohol.png" alt="Alcohol">
+                </a>
+                <p>Alcohol</p>
+            </div>
+            <div class="icon">
+                <a href="grains.html">
+                    <img src="Images/grains.png" alt="Grains">
+                </a>
+                <p>Rice/Grains</p>
+            </div>
+            <div class="icon">
+                <a href="spices.html">
+                    <img src="Images/spices1.png" alt="Spices">
+                </a>
+                <p>Spices</p>
+            </div>
+            <div class="icon">
+                <a href="houseware.html">
+                    <img src="Images/cookware.png" alt="houseware">
+                </a>
+                <p>Houseware</p>
+            </div>
+        </div>
+        <button class="scroll-button right" onclick="scrollCategoryRight()">&#8250;</button>
+    </div>
+    
+<!-- Events, Recipes, Sales Section -->
+<div class="grid-container">
+    <div class="grid-item big">
+        <a href="Events.html">
+        <img src="Images/events.png" alt="Event Image 1">
+        <div class="overlay">
+            <p>Event</p>
+        </div>
+     </a>
+    </div>
+    <div class="grid-item medium">
+        <a href="restaurant.html">
+        <img src="Images/restaurant.png" alt="Event Image 2">
+        <div class="overlay">
+            <p>Restaurant</p>
+        </div>
+        </a>
+    </div>
+    <div class="grid-item small">
+        <a href="deals.html">
+        <img src="Images/sale.png" alt="Sale Image">
+        <div class="overlay">
+            <p>Sales</p>
+        </div>
+        </a>
+    </div>
+    <div class="grid-item small">
+        <a href="recipe.html">
+        <img src="Images/reciepes.png" alt="Recipe Image">
+        <div class="overlay">
+            <p>Recipe Ideas</p>
+        </div>
+        </a>
+    </div>
+</div>
+<div class="best-sellers-section">
+    <h2>Trending & Best Sellers</h2>
+    <div class="slider-controls">
+        <button class="prev" onclick="scrollBestSellersLeft()">&lt;</button>
+        <div class="product-slider" id="bestSellersSlider">
+
+            <!-- Adding all products -->
+            <div class="product-card">
+                <img src="HOT_SPECIALS/RICCOPASSIONFRUITPULP.jpg" alt="RICCO'S PASSION FRUIT PULP">
+                <p class="brand">Ricco</p>
+                <h3>PASSION FRUIT</h3>
+                <h3>PULP</h3>
+                <p class="price">$1.50</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/RICCOMANGOFRUITPULP.jpg" alt="RICCO'S MANGO FRUIT PULP">
+                <p class="brand">Ricco</p>
+                <h3>MANGO FRUIT</h3>
+                <h3>PULP</h3>
+                <p class="price">$1.50</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/RICCOPEACHWITHPULP.jpg" alt="RICCO'S PEACH WITH PULP">
+                <p class="brand">Ricco</p>
+                <h3>PEACH WITH</h3>
+                <h3>PULP</h3>
+                <p class="price">$1.50</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/RICCOPINEAPPLEWITHPULP.jpg" alt="RICCO'S PINEAPPLE WITH PULP">
+                <p class="brand">Ricco</p>
+                <h3>PINEAPPLE</h3>
+                <h3>WITH PULP</h3>
+                <p class="price">$1.50</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/RICCOSOURSOPWITHPULP.jpg" alt="RICCO'S SOURSOP WITH PULP">
+                <p class="brand">Ricco</p>
+                <h3>SOURSOP WITH</h3>
+                <h3>PULP</h3>
+                <p class="price">$1.50</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/REALBASILSEEDDRINKPINEAPPLEFLAVOUR.jpg" alt="REAL BASIL SEED DRINK PINEAPPLE FLAVOUR">
+                <p class="brand">Real</p>
+                <h3>BASIL SEED</h3>
+                <h3>PINEAPPLE</h3>
+                <p class="price">$1.50</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/REALBASILSEEDDRINKMANGOFLAVOUR.jpg" alt="REAL BASIL SEED DRINK MANGO FLAVOUR">
+                <p class="brand">Real</p>
+                <h3>BASIL SEED</h3>
+                <h3>MANGO FLAV</h3>
+                <p class="price">$1.50</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/REALBASILSEEDDRINKSTRAWBERRYFLAVOUR.jpg" alt="REAL BASIL SEED DRINK STRAWBERRY FLAVOUR">
+                <p class="brand">Real</p>
+                <h3>BASIL SEED</h3>
+                <h3>STRAWBERRY</h3>
+                <p class="price">$1.50</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/CARBONATEDRAMUNEYUZU.jpg" alt="CARBONATED RAMUNE YUZU">
+                <p class="brand">Ramune</p>
+                <h3>CARBONATED</h3>
+                <h3>RAMUNE YUZU</h3>
+                <p class="price">$1.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/CARBONATEDRAMUNEBLUEBERRY.jpg" alt="CARBONATED RAMUNE BLUEBERRY">
+                <p class="brand">Ramune</p>
+                <h3>CARBONATED</h3>
+                <h3>BLUEBERRY</h3>
+                <p class="price">$1.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/CARBONATEDRAMUNESTRAWBERRY.jpg" alt="CARBONATED RAMUNE STRAWBERRY">
+                <p class="brand">Ramune</p>
+                <h3>CARBONATED</h3>
+                <h3>STRAWBERRY</h3>
+                <p class="price">$1.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/SHIRAKIKUCARBONATEDRAMUNEORANGE.jpg" alt="SHIRAKIKU CARBONATED RAMUNE ORANGE">
+                <p class="brand">Shirakiku</p>
+                <h3>CARBONATED</h3>
+                <h3>ORANGE</h3>
+                <p class="price">$1.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/SHIRAKIKUCARBONATEDRAMUNEMELON.jpg" alt="SHIRAKIKU CARBONATED RAMUNE MELON">
+                <p class="brand">Shirakiku</p>
+                <h3>CARBONATED</h3>
+                <h3>MELON</h3>
+                <p class="price">$1.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/MICANTONPLANTAINSTRIPS.jpg" alt="MI CANTON PLANTAIN STRIPS">
+                <p class="brand">Mi Canton</p>
+                <h3>PLANTAIN</h3>
+                <h3>STRIPS</h3>
+                <p class="price">$6.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/MADUROSMICANTONPLANTAINSTRIPS.jpg" alt="MADUROS MI CANTON PLANTAIN STRIPS">
+                <p class="brand">Mi Canton</p>
+                <h3>MADUROS</h3>
+                <h3>STRIPS</h3>
+                <p class="price">$6.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/LIMONMICANTONPLANTAINSTRIPS.jpg" alt="LIMON MI CANTON PLANTAIN STRIPS">
+                <p class="brand">Mi Canton</p>
+                <h3>LIMON</h3>
+                <h3>STRIPS</h3>
+                <p class="price">$6.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/MICANTONCASSAVASTRIPS.jpg" alt="MI CANTON CASSAVA STRIPS">
+                <p class="brand">Mi Canton</p>
+                <h3>CASSAVA</h3>
+                <h3>STRIPS</h3>
+                <p class="price">$6.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/JINJINJELLYSTICK.jpg" alt="JIN JIN JELLY STICK">
+                <p class="brand">Jin Jin</p>
+                <h3>JELLY STICK</h3>
+                <h3>/ STRIP</h3>
+                <p class="price">$1.98</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/INSTANTCOFFEE3IN1.jpg" alt="INSTANT COFFEE 3 IN 1 100 STICKS">
+                <p class="brand">Instant</p>
+                <h3>COFFEE 3 IN 1</h3>
+                <h3>100 STICKS</h3>
+                <p class="price">$19.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/KEWPIEMAYONNAISE.jpg" alt="KEWPIE MAYONNAISE">
+                <p class="brand">Kewpie</p>
+                <h3>MAYONNAISE</h3>
+                <p class="price">$6.98</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/YOLITASOURSOPPULP.jpg" alt="YOLITA SOURSOP PULP">
+                <p class="brand">Yolita</p>
+                <h3>SOURSOP PULP</h3>
+                <h3>(16 OZ)</h3>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/CARRIBEANFROZENBEEFPATTIES.jpg" alt="CARRIBEAN FROZEN FOODS FZ BEEF PATTIES (SPICY) (9 OZ)">
+                <p class="brand">Caribbean Frozen</p>
+                <h3>FZ BEEF PATTIES</h3>
+                <h3>(SPICY) (9 OZ)</h3>
+                <p class="price">$5.50</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/SWADFZGARLICNAAN.jpg" alt="SWAD FZ GARLIC NAAN">
+                <p class="brand">Swad</p>
+                <h3>GARLIC NAAN</h3>
+                <h3>FZ (3 LB)</h3>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/LAGOPARTYCAPPUCCINOWAFFERS.jpg" alt="LAGO PARTY CAPPUCCINO FLAV. WAFFERS (250 GM)">
+                <p class="brand">Lago</p>
+                <h3>CAPPUCCINO</h3>
+                <h3>PARTY WAFFERS</h3>
+                <h3>(250 GM)</h3>
+                <p class="price">$3.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/LOTTECHOCOPIE.jpg" alt="LOTTE CHOCO PIE">
+                <p class="brand">Lotte</p>
+                <h3>CHOCO PIE</h3>
+                <p class="price">$3.98</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/LOTTECUSTARDCREAMCAKES.jpg" alt="LOTTE CUSTARD CREAM CAKES">
+                <p class="brand">Lotte</p>
+                <h3>CUSTARD</h3>
+                <h3>CREAMCAKES</h3>
+                <p class="price">$4.98</p>
+            </div>
+            <div class="product-card">
+                <img src="HOT_SPECIALS/ITALIANREDMEATCHIPS.jpg" alt="ITALIAN RED MEAT FLAV. CHIPS">
+                <p class="brand">Italian</p>
+                <h3>RED MEAT FLAV.</h3>
+                <h3>CHIPS</h3>
+                <p class="price">$1.68</p>ßß
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/MIFUJIMOCHIVANILLAICECREAM.jpg" alt="MIFUJI MOCHI VANILLA ICE CREAM">
+                <p class="brand">Mifuji</p>
+                <h3>MOCHI VANILLA</h3>
+                <h3>ICE CREAM</h3>
+                <h3>(224G)</h3>
+                <p class="price">$6.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/MAGNOLLAMACAPUNOUBEICECREAM.jpg" alt="MAGNOLLA MACAPUNO UBE ICE CREAM">
+                <p class="brand">Magnolla</p>
+                <h3>MACAPUNO</h3>
+                <h3>UBE ICE CREAM</h3>
+                <h3>(1.5 OZ)</h3>
+                <p class="price">$13.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/MAGNOLLAMACAPUNOCONUTICECREAM.jpg" alt="MAGNOLLA MACAPUNO COCONUT ICE CREAM">
+                <p class="brand">Magnolla</p>
+                <h3>COCONUT</h3>
+                <h3>ICE CREAM </h3>
+                <h3>(1.5 OZ)</h3>
+                <p class="price">$13.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/BINGGRAEMELONAICEBARSTRAWBERRY.jpg" alt="BINGGRAE MELONA ICE BAR STRAWBERRY">
+                <p class="brand">Binggrae</p>
+                <h3>MELONA</h3>
+                <h3>ICEBAR</h3>
+                <h3>STRW (8 BARS)</h3>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/BINGGRAEMELONAICEBARMANGO.jpg" alt="BINGGRAE MELONA ICE BAR MANGO">
+                <p class="brand">Binggrae</p>
+                <h3>MELONA</h3>
+                <h3>ICEBAR</h3>
+                <h3>MANGO (8 BARS)</h3>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/BINGGRAEMELONAICEBARPURPLE.jpg" alt="BINGGRAE MELONA ICE BAR PURPLE">
+                <p class="brand">Binggrae</p>
+                <h3>MELONA</h3>
+                
+                <h3>PURPLE (8 BARS)</h3>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/SAMYANGBULDAKSPICYCHICKEN.jpg" alt="SAMYANG BULDAK ARTIFICIAL SPICY CHICKEN FLAVOUR">
+                <p class="brand">Samyang</p>
+                <h3>BULDAK</h3>
+                <h3>SPICY CHICKEN</h3>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/JJAJANGBULDAKSPICYCHICKEN.jpg" alt="JJAJANG BULDAK ARTIFICIAL SPICY CHICKEN FLAVOUR">
+                <p class="brand">Jjajang</p>
+                <h3>BULDAK</h3>
+                <h3>SPICY CHICKEN</h3>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/TOMYUMBULDAKSPICYCHICKEN.jpg" alt="TOMYUM BULDAK ARTIFICIAL SPICY CHICKEN FLAVOUR">
+                <p class="brand">Tomyum</p>
+                <h3>BULDAK</h3>
+                <h3>SPICY CHICKEN</h3>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/KENTMANGOES.jpg" alt="KENT MANGOES">
+                <p class="brand">Kent</p>
+                <h3>MANGOES</h3>
+                <p class="price">$16.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/WANTWANTSENBEIRICECRACKERS.jpg" alt="WANTWANT SENBEI RICE CRACKERS">
+                <p class="brand">WantWant</p>
+                <h3>SENBEI RICE</h3>
+                <h3>CRACKERS </h3>
+                <h3>(520 G)</h3>
+                <p class="price">$5.98</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/HONGYUANGUAVACANDY.jpg" alt="HONGYUAN GUAVA CANDY">
+                <p class="brand">Hongyuan</p>
+                <h3>GUAVA CANDY</h3>
+                <p class="price">$2.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/KSFBOWLROASTEDBEEFNOODLE.jpg" alt="KSF BOWL ROASTED BEEF NOODLE SOUP">
+                <p class="brand">KSF</p>
+                <h3>BOWL ROASTED</h3>
+                <h3>BEEF NOODLE</h3>
+                <p class="price">$1.00</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/KSFBOWLROASTEDBEEFFLAVNOODLE.jpg" alt="KSF BOWL ROASTED BEEF FLAV. NOODLE SOUP">
+                <p class="brand">KSF</p>
+                <h3>BOWL ROASTED</h3>
+                <h3>BEEF FLAV BOWL</h3>
+                <p class="price">$3.98</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/POCKYCHOCOLATEBISCUIT.jpg" alt="POCKY CHOCOLATE BISCUIT STICK">
+                <p class="brand">Pocky</p>
+                <h3>CHOCOLATE BISCUIT</h3>
+                <h3>STICK (2.46 OZ)</h3>
+                <p class="price">$2.59</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/OJOBUTTERCOCONUTCOOKIES.png" alt="OJO BUTTER COCONUT COOKIES">
+                <p class="brand">Ojo</p>
+                <h3>BUTTER</h3>
+                <h3>COCONUT</h3>
+                <h3>COOKIES-150GM</h3>
+                <p class="price">$2.59</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/LAYSNUMBHOTPOTCHIPS.jpg" alt="LAY'S NUMB & SPICY HOT POT FLAV">
+                <p class="brand">Lay's</p>
+                <h3>NUMB & SPICY</h3>
+                <h3>HOT POT CHIPS</h3>
+                <p class="price">$1.68</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/MEXICANCHICKENTOMATOCHIPS.jpg" alt="MEXICAN CHICKEN TOMATO FLAV. CHIPS">
+                <p class="brand">Mexican</p>
+                <h3>CHICKEN</h3>
+                <h3>FLAV-CHIPS</h3>
+                <p class="price">$1.68</p>
+            </div>
+            <div class="product-card">
+                <img src="HOT_SPECIALS/ROASTEDCUMINLAMBSKEWERCHIPS.jpg" alt="ROASTED CUMIN LAMB SKEWER FLAV. CHIPS">
+                <p class="brand">Roasted</p>
+                <h3>CUMIN-LAMB</h3>
+                <h3>SKEWER CHIPS</h3>
+                <p class="price">$1.68</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/CUCUMBERPOTATOCHIPS.jpg" alt="CUCUMBER FLAV. POTATO CHIPS">
+                <p class="brand">Cucumber</p>
+                <h3>FLAV. POTATO</h3>
+                <h3>CHIPS</h3>
+                <p class="price">$1.68</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/ROASTEDGARLICOYSTERCHIPS.jpg" alt="ROASTED GARLIC OYSTER FLAV. CHIPS">
+                <p class="brand">Roasted</p>
+                <h3>GARLIC OYSTER</h3>
+                <h3>FLAV. CHIPS</h3>
+                <p class="price">$1.68</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/SEASONEDSEAWEEDLAVER.jpg" alt="SEASONED SEAWEED LAVER">
+                <p class="brand">Seasoned</p>
+                <h3>SEAWEED LAVER</h3>
+                <h3>SEASONED</h3>
+                <p class="price">$7.99</p>
+            </div>
+
+            <div class="product-card">
+                <img src="HOT_SPECIALS/JINJINASSORTEDCOCONUT.jpg" alt="JIN JIN ASSORTED COCONUT JELLY">
+                <p class="brand">Jin Jin</p>
+                <h3>ASSORTED</h3>
+                <h3>COCONUT</h3>
+                <h3>JELLY</h3>
+                <p class="price">$4.98</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/ROASTEDSEAWEEDLAVER.jpg" alt="ROASTED SEAWEED LAVER">
+                <p class="brand">Roasted</p>
+                <h3>SEAWEED LAVER</h3>
+                <h3>ROASTED</h3>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/JINJINLYCHEECOCONUTJELLYJAR.jpg" alt="JIN JIN LYCHEE COCONUT JELLY JAR">
+                <p class="brand">Jin Jin</p>
+                <h3>LYCHEE</h3>
+                <h3>COCONUT</h3>
+                <h3>JELLY JAR</h3>
+                <p class="price">$4.98</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/RICOASSORTEDPUDDINGCUP.jpg" alt="RICO ASSORTED FLAV. PUDDING CUP">
+                <p class="brand">Rico</p>
+                <h3>ASSORTED FLAV.</h3>
+                <h3>PUDDING CUP</h3>
+                <p class="price">$5.98</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/RICOLYCHEEPUDDINGCUP.jpg" alt="RICO LYCHEE FLAV. PUDDING CUP">
+                <p class="brand">Rico</p>
+                <h3>LYCHEE FLAV.</h3>
+                <h3>PUDDING CUP</h3>
+                <p class="price">$5.98</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/WANGGREENTEASEAWEED.jpg" alt="WANG GREEN TEA SEASONED SEAWEED">
+                <p class="brand">Wang</p>
+                <h3>GREEN TEA</h3>
+                <h3>SEASONED</h3>
+                <h3>SEAWEED</h3>
+                <p class="price">$7.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/RICOCOCOCONUTSODA.jpg" alt="RICO COCO (COCONUT SODA)">
+                <p class="brand">Rico</p>
+                <h3>COCO-COCONUT</h3>
+                <h3>SODA</h3>
+                <p class="price">$3.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/RICOCOCOCONUTSODA6PK.jpg" alt="RICO COCO (COCONUT SODA) 6 PK">
+                <p class="brand">Rico</p>
+                <h3>COCO-COCONUT</h3>
+                <h3>SODA 6 PK</h3>
+                <p class="price">$6.99</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/CHACHANATURALSUNFLOWERSEEDS.jpg" alt="CHACHA NATURAL FLAV. SUNFLOWER SEEDS">
+                <p class="brand">Chacha</p>
+                <h3>NATURAL-FLAV.</h3>
+                <h3>SUNFLOWSEEDS</h3>
+                <p class="price">$2.98</p>
+            </div>
+            
+            <div class="product-card">
+                <img src="HOT_SPECIALS/CHAPCHASUNFLOWERSEEDS.jpg" alt="CHA P-CHA SUNFLOWER SEEDS">
+                <p class="brand">Cha P-Cha</p>
+                <h4>SPICY</h3>
+                <h4>SUNFLOWSEEDS</h3>
+                <p class="price">$2.98</p>
+            </div>
+            
+        </div>
+        <button class="next" onclick="scrollBestSellersRight()">&gt;</button>
+    </div>
+</div>
+
+
+<section class="new-arrivals-section" id="new-arrivals">
+    <h2>New Arrivals</h2>
+
+    <!-- Row 1 -->
+    <div class="scroll-container-wrapper">
+        <button class="scroll-button left" onclick="scrollLeft(1)">&#60;</button>
+        <div class="scroll-container">
+            <div class="new-arrivals-slider" id="row-1">
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/BINGGRAEMELONAICEBARSTRAWBERRY.jpg" alt="BINGGRAE MELONA ICE BAR STRAWBERRY">
+                    <p class="brand">Binggrae</p>
+                    <h3>MELONA</h3>
+                    <h3>ICEBAR</h3>
+                    <h3>STRW (8 BARS)</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/BINGGRAEMELONAICEBARMANGO.jpg" alt="BINGGRAE MELONA ICE BAR MANGO">
+                    <p class="brand">Binggrae</p>
+                    <h3>MELONA</h3>
+                    <h3>ICEBAR</h3>
+                    <h3>MANGO (8 BARS)</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/BINGGRAEMELONAICEBARPURPLE.jpg" alt="BINGGRAE MELONA ICE BAR PURPLE">
+                    <p class="brand">Binggrae</p>
+                    <h3>MELONA</h3>
+                    
+                    <h3>PURPLE (8 BARS)</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/SAMYANGBULDAKSPICYCHICKEN.jpg" alt="SAMYANG BULDAK ARTIFICIAL SPICY CHICKEN FLAVOUR">
+                    <p class="brand">Samyang</p>
+                    <h3>BULDAK</h3>
+                    <h3>SPICY CHICKEN</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/JJAJANGBULDAKSPICYCHICKEN.jpg" alt="JJAJANG BULDAK ARTIFICIAL SPICY CHICKEN FLAVOUR">
+                    <p class="brand">Jjajang</p>
+                    <h3>BULDAK</h3>
+                    <h3>SPICY CHICKEN</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/TOMYUMBULDAKSPICYCHICKEN.jpg" alt="TOMYUM BULDAK ARTIFICIAL SPICY CHICKEN FLAVOUR">
+                    <p class="brand">Tomyum</p>
+                    <h3>BULDAK</h3>
+                    <h3>SPICY CHICKEN</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/KENTMANGOES.jpg" alt="KENT MANGOES">
+                    <p class="brand">Kent</p>
+                    <h3>MANGOES</h3>
+                    <p class="price">$16.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/WANTWANTSENBEIRICECRACKERS.jpg" alt="WANTWANT SENBEI RICE CRACKERS">
+                    <p class="brand">WantWant</p>
+                    <h3>SENBEI RICE</h3>
+                    <h3>CRACKERS </h3>
+                    <h3>(520 G)</h3>
+                    <p class="price">$5.98</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/HONGYUANGUAVACANDY.jpg" alt="HONGYUAN GUAVA CANDY">
+                    <p class="brand">Hongyuan</p>
+                    <h3>GUAVA CANDY</h3>
+                    <p class="price">$2.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/KSFBOWLROASTEDBEEFNOODLE.jpg" alt="KSF BOWL ROASTED BEEF NOODLE SOUP">
+                    <p class="brand">KSF</p>
+                    <h3>BOWL ROASTED</h3>
+                    <h3>BEEF NOODLE</h3>
+                    <p class="price">$1.00</p>
+                </div>
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/BINGGRAEMELONAICEBARPURPLE.jpg" alt="BINGGRAE MELONA ICE BAR PURPLE">
+                    <p class="brand">Binggrae</p>
+                    <h3>MELONA</h3>
+                    
+                    <h3>PURPLE (8 BARS)</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/SAMYANGBULDAKSPICYCHICKEN.jpg" alt="SAMYANG BULDAK ARTIFICIAL SPICY CHICKEN FLAVOUR">
+                    <p class="brand">Samyang</p>
+                    <h3>BULDAK</h3>
+                    <h3>SPICY CHICKEN</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/JJAJANGBULDAKSPICYCHICKEN.jpg" alt="JJAJANG BULDAK ARTIFICIAL SPICY CHICKEN FLAVOUR">
+                    <p class="brand">Jjajang</p>
+                    <h3>BULDAK</h3>
+                    <h3>SPICY CHICKEN</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/TOMYUMBULDAKSPICYCHICKEN.jpg" alt="TOMYUM BULDAK ARTIFICIAL SPICY CHICKEN FLAVOUR">
+                    <p class="brand">Tomyum</p>
+                    <h3>BULDAK</h3>
+                    <h3>SPICY CHICKEN</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/KENTMANGOES.jpg" alt="KENT MANGOES">
+                    <p class="brand">Kent</p>
+                    <h3>MANGOES</h3>
+                    <p class="price">$16.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/WANTWANTSENBEIRICECRACKERS.jpg" alt="WANTWANT SENBEI RICE CRACKERS">
+                    <p class="brand">WantWant</p>
+                    <h3>SENBEI RICE</h3>
+                    <h3>CRACKERS </h3>
+                    <h3>(520 G)</h3>
+                    <p class="price">$5.98</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/HONGYUANGUAVACANDY.jpg" alt="HONGYUAN GUAVA CANDY">
+                    <p class="brand">Hongyuan</p>
+                    <h3>GUAVA CANDY</h3>
+                    <p class="price">$2.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/KSFBOWLROASTEDBEEFNOODLE.jpg" alt="KSF BOWL ROASTED BEEF NOODLE SOUP">
+                    <p class="brand">KSF</p>
+                    <h3>BOWL ROASTED</h3>
+                    <h3>BEEF NOODLE</h3>
+                    <p class="price">$1.00</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/KSFBOWLROASTEDBEEFFLAVNOODLE.jpg" alt="KSF BOWL ROASTED BEEF FLAV. NOODLE SOUP">
+                    <p class="brand">KSF</p>
+                    <h3>BOWL ROASTED</h3>
+                    <h3>BEEF FLAV BOWL</h3>
+                    <p class="price">$3.98</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/POCKYCHOCOLATEBISCUIT.jpg" alt="POCKY CHOCOLATE BISCUIT STICK">
+                    <p class="brand">Pocky</p>
+                    <h3>CHOCOLATE BISCUIT</h3>
+                    <h3>STICK (2.46 OZ)</h3>
+                    <p class="price">$2.59</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/OJOBUTTERCOCONUTCOOKIES.png" alt="OJO BUTTER COCONUT COOKIES">
+                    <p class="brand">Ojo</p>
+                    <h3>BUTTER</h3>
+                    <h3>COCONUT</h3>
+                    <h3>COOKIES-150GM</h3>
+                    <p class="price">$2.59</p>
+                </div>
+                <!-- Add more product cards -->
+            </div>
+        </div>
+        <button class="scroll-button right" onclick="scrollRight(1)">&#62;</button>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="scroll-container-wrapper">
+        <button class="scroll-button left" onclick="scrollLeft(2)">&#60;</button>
+        <div class="scroll-container">
+            <div class="new-arrivals-slider" id="row-2">
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/ROASTEDCUMINLAMBSKEWERCHIPS.jpg" alt="ROASTED CUMIN LAMB SKEWER FLAV. CHIPS">
+                    <p class="brand">Roasted</p>
+                    <h3>CUMIN-LAMB</h3>
+                    <h3>SKEWER CHIPS</h3>
+                    <p class="price">$1.68</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/CUCUMBERPOTATOCHIPS.jpg" alt="CUCUMBER FLAV. POTATO CHIPS">
+                    <p class="brand">Cucumber</p>
+                    <h3>FLAV. POTATO</h3>
+                    <h3>CHIPS</h3>
+                    <p class="price">$1.68</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/ROASTEDGARLICOYSTERCHIPS.jpg" alt="ROASTED GARLIC OYSTER FLAV. CHIPS">
+                    <p class="brand">Roasted</p>
+                    <h3>GARLIC OYSTER</h3>
+                    <h3>FLAV. CHIPS</h3>
+                    <p class="price">$1.68</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/SEASONEDSEAWEEDLAVER.jpg" alt="SEASONED SEAWEED LAVER">
+                    <p class="brand">Seasoned</p>
+                    <h3>SEAWEED LAVER</h3>
+                    <h3>SEASONED</h3>
+                    <p class="price">$7.99</p>
+                </div>
+    
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/JINJINASSORTEDCOCONUT.jpg" alt="JIN JIN ASSORTED COCONUT JELLY">
+                    <p class="brand">Jin Jin</p>
+                    <h3>ASSORTED</h3>
+                    <h3>COCONUT</h3>
+                    <h3>JELLY</h3>
+                    <p class="price">$4.98</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/ROASTEDSEAWEEDLAVER.jpg" alt="ROASTED SEAWEED LAVER">
+                    <p class="brand">Roasted</p>
+                    <h3>SEAWEED LAVER</h3>
+                    <h3>ROASTED</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/JINJINLYCHEECOCONUTJELLYJAR.jpg" alt="JIN JIN LYCHEE COCONUT JELLY JAR">
+                    <p class="brand">Jin Jin</p>
+                    <h3>LYCHEE</h3>
+                    <h3>COCONUT</h3>
+                    <h3>JELLY JAR</h3>
+                    <p class="price">$4.98</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/RICOASSORTEDPUDDINGCUP.jpg" alt="RICO ASSORTED FLAV. PUDDING CUP">
+                    <p class="brand">Rico</p>
+                    <h3>ASSORTED FLAV.</h3>
+                    <h3>PUDDING CUP</h3>
+                    <p class="price">$5.98</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/RICOLYCHEEPUDDINGCUP.jpg" alt="RICO LYCHEE FLAV. PUDDING CUP">
+                    <p class="brand">Rico</p>
+                    <h3>LYCHEE FLAV.</h3>
+                    <h3>PUDDING CUP</h3>
+                    <p class="price">$5.98</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/WANGGREENTEASEAWEED.jpg" alt="WANG GREEN TEA SEASONED SEAWEED">
+                    <p class="brand">Wang</p>
+                    <h3>GREEN TEA</h3>
+                    <h3>SEASONED</h3>
+                    <h3>SEAWEED</h3>
+                    <p class="price">$7.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/RICOCOCOCONUTSODA.jpg" alt="RICO COCO (COCONUT SODA)">
+                    <p class="brand">Rico</p>
+                    <h3>COCO-COCONUT</h3>
+                    <h3>SODA</h3>
+                    <p class="price">$3.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/RICOCOCOCONUTSODA6PK.jpg" alt="RICO COCO (COCONUT SODA) 6 PK">
+                    <p class="brand">Rico</p>
+                    <h3>COCO-COCONUT</h3>
+                    <h3>SODA 6 PK</h3>
+                    <p class="price">$6.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/CHACHANATURALSUNFLOWERSEEDS.jpg" alt="CHACHA NATURAL FLAV. SUNFLOWER SEEDS">
+                    <p class="brand">Chacha</p>
+                    <h3>NATURAL-FLAV.</h3>
+                    <h3>SUNFLOWSEEDS</h3>
+                    <p class="price">$2.98</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/CHAPCHASUNFLOWERSEEDS.jpg" alt="CHA P-CHA SUNFLOWER SEEDS">
+                    <p class="brand">Cha P-Cha</p>
+                    <h4>SPICY</h3>
+                    <h4>SUNFLOWSEEDS</h3>
+                    <p class="price">$2.98</p>
+                </div>
+                
+                <!-- Add more product cards -->
+            </div>
+        </div>
+        <button class="scroll-button right" onclick="scrollRight(2)">&#62;</button>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="scroll-container-wrapper">
+        <button class="scroll-button left" onclick="scrollLeft(3)">&#60;</button>
+        <div class="scroll-container">
+            <div class="new-arrivals-slider" id="row-3">
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/RICCOPASSIONFRUITPULP.jpg" alt="RICCO'S PASSION FRUIT PULP">
+                    <p class="brand">Ricco</p>
+                    <h3>PASSION FRUIT</h3>
+                    <h3>PULP</h3>
+                    <p class="price">$1.50</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/RICCOMANGOFRUITPULP.jpg" alt="RICCO'S MANGO FRUIT PULP">
+                    <p class="brand">Ricco</p>
+                    <h3>MANGO FRUIT</h3>
+                    <h3>PULP</h3>
+                    <p class="price">$1.50</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/RICCOPEACHWITHPULP.jpg" alt="RICCO'S PEACH WITH PULP">
+                    <p class="brand">Ricco</p>
+                    <h3>PEACH WITH</h3>
+                    <h3>PULP</h3>
+                    <p class="price">$1.50</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/RICCOPINEAPPLEWITHPULP.jpg" alt="RICCO'S PINEAPPLE WITH PULP">
+                    <p class="brand">Ricco</p>
+                    <h3>PINEAPPLE</h3>
+                    <h3>WITH PULP</h3>
+                    <p class="price">$1.50</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/RICCOSOURSOPWITHPULP.jpg" alt="RICCO'S SOURSOP WITH PULP">
+                    <p class="brand">Ricco</p>
+                    <h3>SOURSOP WITH</h3>
+                    <h3>PULP</h3>
+                    <p class="price">$1.50</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/REALBASILSEEDDRINKPINEAPPLEFLAVOUR.jpg" alt="REAL BASIL SEED DRINK PINEAPPLE FLAVOUR">
+                    <p class="brand">Real</p>
+                    <h3>BASIL SEED</h3>
+                    <h3>PINEAPPLE</h3>
+                    <p class="price">$1.50</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/REALBASILSEEDDRINKMANGOFLAVOUR.jpg" alt="REAL BASIL SEED DRINK MANGO FLAVOUR">
+                    <p class="brand">Real</p>
+                    <h3>BASIL SEED</h3>
+                    <h3>MANGO FLAV</h3>
+                    <p class="price">$1.50</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/REALBASILSEEDDRINKSTRAWBERRYFLAVOUR.jpg" alt="REAL BASIL SEED DRINK STRAWBERRY FLAVOUR">
+                    <p class="brand">Real</p>
+                    <h3>BASIL SEED</h3>
+                    <h3>STRAWBERRY</h3>
+                    <p class="price">$1.50</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/CARBONATEDRAMUNEYUZU.jpg" alt="CARBONATED RAMUNE YUZU">
+                    <p class="brand">Ramune</p>
+                    <h3>CARBONATED</h3>
+                    <h3>RAMUNE YUZU</h3>
+                    <p class="price">$1.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/CARBONATEDRAMUNEBLUEBERRY.jpg" alt="CARBONATED RAMUNE BLUEBERRY">
+                    <p class="brand">Ramune</p>
+                    <h3>CARBONATED</h3>
+                    <h3>BLUEBERRY</h3>
+                    <p class="price">$1.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/CARBONATEDRAMUNESTRAWBERRY.jpg" alt="CARBONATED RAMUNE STRAWBERRY">
+                    <p class="brand">Ramune</p>
+                    <h3>CARBONATED</h3>
+                    <h3>STRAWBERRY</h3>
+                    <p class="price">$1.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/SHIRAKIKUCARBONATEDRAMUNEORANGE.jpg" alt="SHIRAKIKU CARBONATED RAMUNE ORANGE">
+                    <p class="brand">Shirakiku</p>
+                    <h3>CARBONATED</h3>
+                    <h3>ORANGE</h3>
+                    <p class="price">$1.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/SHIRAKIKUCARBONATEDRAMUNEMELON.jpg" alt="SHIRAKIKU CARBONATED RAMUNE MELON">
+                    <p class="brand">Shirakiku</p>
+                    <h3>CARBONATED</h3>
+                    <h3>MELON</h3>
+                    <p class="price">$1.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/MICANTONPLANTAINSTRIPS.jpg" alt="MI CANTON PLANTAIN STRIPS">
+                    <p class="brand">Mi Canton</p>
+                    <h3>PLANTAIN</h3>
+                    <h3>STRIPS</h3>
+                    <p class="price">$6.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/MADUROSMICANTONPLANTAINSTRIPS.jpg" alt="MADUROS MI CANTON PLANTAIN STRIPS">
+                    <p class="brand">Mi Canton</p>
+                    <h3>MADUROS</h3>
+                    <h3>STRIPS</h3>
+                    <p class="price">$6.99</p>
+                </div>
+                
+                <div class="product-card">
+                    <img src="HOT_SPECIALS/LIMONMICANTONPLANTAINSTRIPS.jpg" alt="LIMON MI CANTON PLANTAIN STRIPS">
+                    <p class="brand">Mi Canton</p>
+                    <h3>LIMON</h3>
+                    <h3>STRIPS</h3>
+                    <p class="price">$6.99</p>
+                </div>
+                <!-- Add more product cards -->
+            </div>
+        </div>
+        <button class="scroll-button right" onclick="scrollRight(3)">&#62;</button>
+    </div>
+</section>
+<section class="country-section">
+    <h2>Shop International Groceries</h2>
+    <div class="country-container">
+        <!-- Country Icon 1 -->
+        <a href="southasia.html">
+            <div class="country-icon">
+                <img src="countryimages/buddha.png" alt="South Asia">
+                <p>South Asia</p>
+            </div>
+        </a>
+
+        <!-- Country Icon 2 -->
+        <a href="middleeastern.html">
+            <div class="country-icon">
+                <img src="countryimages/mosque.png" alt="Middle Eastern">
+                <p>Middle Eastern</p>
+            </div>
+        </a>
+
+        <!-- Country Icon 3 -->
+        <a href="african.html">
+            <div class="country-icon">
+                <img src="countryimages/africa.png" alt="African">
+                <p>African</p>
+            </div>
+        </a>
+
+        <!-- Country Icon 4 -->
+        <a href="latinamerica.html">
+            <div class="country-icon">
+                <img src="countryimages/south-america.png" alt="Latin America">
+                <p>Latin America</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section ">
+        <h3>Company Info</h3>
+        <ul>
+          <li><a href="ourstory.html">About Us</a></li>
+          <li><a href="storefinder.html">Contact Us</a></li>
+          <li><a href="returnpolicy.html">Return Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Help & FAQs</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/HometownSupermarketBHM" target="_blank">
+            <img src="images/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/hometown_supermarket_888/" target="_blank">
+            <img src="images/instagram.png" alt="Instagram">
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hometown Supermarket. All rights reserved.</p>
+      <p>Website developed by <a href="https://www.linkedin.com/in/ravitejachalla/">Ravi Teja Challa</a></p>
+    </div>
+  </footer>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBLfs0h2addAMqgMEM8pbDcQ4kN9ZpWx5c",
+          authDomain: "hometown-wesbsite.firebaseapp.com",
+          projectId: "hometown-wesbsite",
+          storageBucket: "hometown-wesbsite.appspot.com",
+          messagingSenderId: "896879616169",
+          appId: "1:896879616169:web:fdcfcce6b13bd3461549b8",
+          measurementId: "G-JJR28ZGNL1"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        const menu_bar = document.querySelector(".mobile_show i")
+        const xmark = document.querySelector("#xmark")
+const menu_sidebar = document.querySelector(".nav-bar")
+
+menu_bar.addEventListener("click",function(){
+    menu_sidebar.classList.add("active")
+})
+xmark.addEventListener("click",function(){
+    menu_sidebar.classList.remove("active")
+})
+
+  //Searchbar function
+  const search_bar = document.querySelector(".search-bar")
+        const search_box = document.querySelector(".search_results_box")
+        const search_mobile_bar = document.querySelector(".mobile_search_bar")
+        const mobile_search_results = document.querySelector(".mobile_search_results")
+    search_bar.addEventListener("click",function(){
+        search_box.classList.toggle("active")
+    })
+    search_mobile_bar.addEventListener("click",function(){
+        mobile_search_results.classList.toggle("active")
+    })
+      </script>
+    <script src="script.js"></script>
+</body>
+</html>

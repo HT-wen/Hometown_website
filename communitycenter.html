@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Center Navbar</title>
+    <link rel="stylesheet" href="communitycenter.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="Images/Hometown logo.png" alt="Hometown Supermarket Logo">
+                    <span>Hometown Supermarket</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#" class="menu-item">BHTT</a></li>
+                    <li><a href="#" class="menu-item">Dance Studio</a></li>
+                    <li><a href="#" class="menu-item">Choir</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Video Section -->
+    <section class="video-section">
+        <video autoplay muted loop>
+            <source src="BHTT.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Welcome Message -->
+    <div class="welcome-section">
+        <h1 class="welcome-text">
+            <i class="fa-solid fa-handshake" style="color: #4CAF50; margin-right: 10px;"></i>
+            Welcome to Our Community Center
+            <i class="fa-solid fa-heart" style="color: #FF5722; margin-left: 10px;"></i>
+        </h1>
+        <p class="welcome-subtext">A place to connect, learn, and grow together!</p>
+    </div>
+    
+    
+
+</section>
+
+<section class="new-arrivals-section" id="new-arrivals">
+    <h2>Events</h2>
+
+    <!-- Row 1 -->
+    <div class="scroll-container-wrapper">
+        <button class="scroll-button left" onclick="scrollLeft(1)">&#60;</button>
+        <div class="scroll-container">
+            <div class="new-arrivals-slider" id="row-1">
+                <div class="product-card">
+                    <img src="communityimages/BHTT_winteropen.jpg" alt="Cooking Workshop" />
+                    <h3>Winter Open</h3>
+                    <div class="brand">Date: January 20, 2024</div>
+                </div>
+                <div class="product-card">
+                    <img src="communityimages/BHTT_event.jpg" alt="Cooking Workshop" />
+                    <h3>Tennis League</h3>
+                    <div class="brand">Date: August 31, 2024</div>
+                </div>
+                <div class="product-card">
+                    <img src="communityimages/BHTT_event3.jpg" alt="Cooking Workshop" />
+                    <h3>Table Tennis League</h3>
+                    <div class="brand">Date: March 16, 2023</div>
+                </div>
+                <div class="product-card">
+                    <img src="communityimages/BHTT4.jpg" alt="Cooking Workshop" />
+                    <h3>Tennis Team League</h3>
+                    <div class="brand">Date: March 9th, 2023</div>
+                </div>
+                <div class="product-card">
+                    <img src="communityimages/BHTT_event2.jpg" alt="Cooking Workshop" />
+                    <h3>Intercity Cup</h3>
+                    <div class="brand">Date: October 22, 2022</div>
+                </div>
+                
+            </div>
+        </div>
+        <button class="scroll-button right" onclick="scrollRight(1)">&#62;</button>
+    </div>
+</section>
+<section class="gallery-section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="communityimages/BHTT2.jpg" alt="Gallery Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="communityimages/Dance.jpg" alt="Gallery Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="communityimages/BHTT.jpg" alt="Gallery Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="communityimages/BHtt6.jpg" alt="Gallery Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="communityimages/BHTT2.jpg" alt="Gallery Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src="communityimages/BHtt5.jpg" alt="Gallery Image 6">
+        </div>
+    </div>
+</section>
+
+<footer>
+        <p>&copy; 2024 Hometown Supermarket. All rights reserved.</p>
+    </footer>
+    <script src="communitycenter.js"></script
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hometown Supermarket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sauces.css">
+          <!-- -------FontAwesome Link------- -->
+          <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+</head>
+<body onload="switchLanguage('en')">
+
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="left-section">
+            <div class="mobile_show">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <img src="Images/Hometown logo.png" alt="Hometown Logo" class="logo">
+            <h1 class="lang en title-main">Hometown Supermarket</h1>
+            <h1 class="lang zh" style="display:none;">家乡超市</h1>
+        </div>
+
+        <div class="search-bar-container">
+            <input type="text" class="search-bar" placeholder="Search for products, categories, and more" onfocus="showSearchResults()" onblur="hideSearchResults()">
+            <div class="search_results_box mobile_hide">
+                <div class="Item">
+                    <h2>Fruits</h2>
+                    <div class="grid">
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/meat.png" alt="">
+                            </div>
+                            <h2>Meat</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/frozen.png" alt="">
+                            </div>
+                            <h2>Frozen</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/sauces.png" alt="">
+                            </div>
+                            <h2>Sauces</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/rice.png" alt="">
+                            </div>
+                            <h2>Rice</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/soft-drink.png">
+                            </div>
+                            <h2>Soft drink</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/snack.png" alt="">
+                            </div>
+                            <h2>Snack</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/vegetables.png" alt="">
+                            </div>
+                            <h2>Vegetables</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/Ramen.png" alt="">
+                            </div>
+                            <h2>Ramen</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="Item">
+                    <h2>Fruits</h2>
+                    <div class="grid">
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/basket.png" alt="">
+                            </div>
+                            <h2>Basket</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/Beauty.png" alt="">
+                            </div>
+                            <h2>Beauty</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/seafood.png" alt="">
+                            </div>
+                            <h2>Seafood</h2>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="produce.html">
+                                <div class="Img">
+                                <img src="Images/Subject.png" alt="">
+                            </div>
+                            <h2>Subject</h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('zh')">中文</button>
+        </div>
+    </div>
+ <!-- Mobile Show -->
+ <div class="mobile_search_box">
+    <input type="text" class="search-bar mobile_search_bar" placeholder="Search for products" onfocus="showSearchResults()" onblur="hideSearchResults()">
+    <i class="fa-solid fa-search"></i>
+    <div class="search_results_box mobile_search_results">
+        <div class="Item">
+            <h2>Fruits</h2>
+            <div class="grid">
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/meat.png" alt="">
+                    </div>
+                    <h2>Meat</h2>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/frozen.png" alt="">
+                    </div>
+                    <h2>Frozen</h2>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/sauces.png" alt="">
+                    </div>
+                    <h2>Sauces</h2>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/rice.png" alt="">
+                    </div>
+                    <h2>Rice</h2>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/soft-drink.png">
+                    </div>
+                    <h2>Soft drink</h2>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/snack.png" alt="">
+                    </div>
+                    <h2>Snack</h2>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/vegetables.png" alt="">
+                    </div>
+                    <h2>Vegetables</h2>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/Ramen.png" alt="">
+                    </div>
+                    <h2>Ramen</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="Item">
+            <h2>Fruits</h2>
+            <div class="grid">
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/basket.png" alt="">
+                    </div>
+                    <h2>Basket</h2>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/Beauty.png" alt="">
+                    </div>
+                    <h2>Beauty</h2>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/seafood.png" alt="">
+                    </div>
+                    <h2>Seafood</h2>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="produce.html">
+                        <div class="Img">
+                        <img src="Images/Subject.png" alt="">
+                    </div>
+                    <h2>Subject</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Search Results Section -->
+    <div class="search-results hide" id="search-results">
+        <div class="category-section">
+            <div class="icon">
+                <a href="produce.html">
+                    <img src="Images/vegetables.png" alt="Produce">
+                    <p>Produce</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="meat.html">
+                    <img src="Images/meat.png" alt="Meat">
+                    <p>Meat</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="ramen.html">
+                    <img src="Images/Ramen.png" alt="Ramen">
+                    <p>Ramen</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="seafood.html">
+                    <img src="Images/seafood.png" alt="Seafood">
+                    <p>Seafood</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="beverages.html">
+                    <img src="Images/soft-drink.png" alt="Beverages">
+                    <p>Beverages</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="snacks.html">
+                    <img src="Images/snack.png" alt="Snacks">
+                    <p>Snacks</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="frozen.html">
+                    <img src="Images/frozen.png" alt="Frozen">
+                    <p>Frozen</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="sauces.html">
+                    <img src="Images/sauces.png" alt="Sauces">
+                    <p>Sauces</p>
+                </a>
+            </div>
+            <div class="icon">
+                <a href="alcohol.html">
+                    <img src="Images/alcohol.png" alt="Alcohol">
+                    <p>Alcohol</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <div class="menu-items">
+            <i class="fa-solid fa-xmark" id="xmark"></i>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">
+                    <span>&#9776;</span> 
+                    <span class="lang en">Categories</span>
+                    <span class="lang zh" style="display:none;">分类</span>
+                </a>
+                <div class="dropdown-content">
+                    <a href="produce.html"><span class="lang en">Produce</span><span class="lang zh" style="display:none;">农产品</span></a>
+                    <a href="seafood.html"><span class="lang en">Seafood</span><span class="lang zh" style="display:none;">海鲜</span></a>
+                    <a href="frozen.html"><span class="lang en">Frozen</span><span class="lang zh" style="display:none;">冷冻</span></a>
+                    <a href="meat.html"><span class="lang en">Meat</span><span class="lang zh" style="display:none;">肉类</span></a>
+                    <a href="ramen.html"><span class="lang en">Noodles</span><span class="lang zh" style="display:none;">面条</span></a>
+                    <a href="beverages.html"><span class="lang en">Beverages</span><span class="lang zh" style="display:none;">饮料</span></a>
+                    <a href="sauces.html"><span class="lang en">Sauces</span><span class="lang zh" style="display:none;">酱料</span></a>
+                    <a href="snacks.html"><span class="lang en">Snacks</span><span class="lang zh" style="display:none;">零食</span></a>
+                    <a href="alcohol.html"><span class="lang en">Alcohol</span><span class="lang zh" style="display:none;">酒类</span></a>
+                </div>
+            </div>
+            <a href="restaurant.html"><span class="lang en">Restaurant</span><span class="lang zh" style="display:none;">餐厅</span></a>
+            <a href="#"><span class="lang en">New Arrivals</span><span class="lang zh" style="display:none;">新品</span></a>
+            <a href="#"><span class="lang en">Deals</span><span class="lang zh" style="display:none;">优惠</span></a>
+            <a href="#"><span class="lang en">Community Center</span><span class="lang zh" style="display:none;">社区中心</span></a>
+            <a href="#"><span class="lang en">Our Story</span><span class="lang zh" style="display:none;">我们的故事</span></a>
+            <a href="#"><span class="lang en">Store Finder</span><span class="lang zh" style="display:none;">门店查询</span></a>
+        </div>
+    </div>
+    <!-- Produce Section -->
+    <section class="produce-section">
+        <div class="produce-container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Produce</span>
+            </nav>
+
+            <!-- Produce Title -->
+            <h1 class="produce-title">Sauces</h1>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <!-- Filter Section -->
+        <aside class="filter-section">
+            <h2>Filters</h2>
+            <div class="filter">
+                <h3>Category</h3>
+                <select id="category-filter">e
+                    <option value="all">All</option>
+                    <option value="soy-sauce">Soy Sauce</option>
+                    <option value="hot-sauce">Hot-Sauce</option>
+                    <option value="fish-sauce">Fish Sauce</option>
+                    <option value="seasoning">Seasoning</option>
+                    <option value="oil">Oil</option>
+                    <option value="sauce">sauce</option>
+                    <option value="paste">Paste</option>
+                    <option value="vinegar">Vinegar</option>
+                    <option value="dressing">Dressing</option>
+                </select>
+            </div>
+            <div class="filter">
+                <h3>Price Range</h3>
+                <input type="range" id="price-range" min="0" max="50" value="25" oninput="updatePriceLabel(this.value)">
+                <span id="price-label">$25</span>
+            </div>
+        </aside>
+
+        <!-- Product Section -->
+        <section class="product-section">
+            <div class="product-grid" id="product-list">
+                <!-- Sample product items will be injected here by JS -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="sauces.js"></script>
+    <script>
+        const menu_bar = document.querySelector(".mobile_show i")
+        const xmark = document.querySelector("#xmark")
+const menu_sidebar = document.querySelector(".nav-bar")
+
+menu_bar.addEventListener("click",function(){
+    menu_sidebar.classList.add("active")
+})
+xmark.addEventListener("click",function(){
+    menu_sidebar.classList.remove("active")
+})
+
+ //Searchbar function
+ const search_bar = document.querySelector(".search-bar")
+        const search_box = document.querySelector(".search_results_box")
+        const search_mobile_bar = document.querySelector(".mobile_search_bar")
+        const mobile_search_results = document.querySelector(".mobile_search_results")
+    search_bar.addEventListener("click",function(){
+        search_box.classList.toggle("active")
+    })
+    search_mobile_bar.addEventListener("click",function(){
+        mobile_search_results.classList.toggle("active")
+    })
+    </script>
+</body>
+</html>
+
+    

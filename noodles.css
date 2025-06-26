@@ -1,0 +1,172 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .nav-links li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('restaurantimages/N1\ szechuan\ beef\ noodle\ soup.JPG') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+/* Menu Category Section */
+.menu-category {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.menu-category h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.noodle-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.noodle-item {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.noodle-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.noodle-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.noodle-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .menu-category h2 {
+        font-size: 24px;
+    }
+
+    .noodle-item h3 {
+        font-size: 16px;
+    }
+
+    .noodle-item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .menu-category h2 {
+        font-size: 20px;
+    }
+
+    .noodle-item {
+        padding: 10px;
+    }
+
+    .noodle-item h3 {
+        font-size: 14px;
+    }
+
+    .noodle-item p {
+        font-size: 12px;
+    }
+}
