@@ -1,8 +1,8 @@
 // Sample product data with images, prices, and descriptions
 const products = [
-    { id: 1, name: 'Baby Banana USA', category: 'fruits', price: 0.89, description: 'Per unit', image: 'produceimages/babybananausa.png' },
-    { id: 2, name: 'Banana Manzano', category: 'fruits', price: 1.19, description: 'Per unit', image: 'produceimages/bananamanzano.png' },
-    { id: 3, name: 'Thai Banana', category: 'fruits', price: 1.49, description: 'Per unit', image: 'produceimages/thaibanana.png' },
+    { id: 1, name: 'Baby Banana USA', category: 'fruits', price: 0.20, description: 'Per unit', image: 'produceimages/babybananausa.png' },
+    { id: 2, name: 'Banana Manzano', category: 'fruits', price: 1.29, description: 'Per unit', image: 'produceimages/bananamanzano.png' },
+    { id: 3, name: 'Thai Banana', category: 'fruits', price: 1.42, description: 'Per unit', image: 'produceimages/thaibanana.png' },
     { id: 4, name: 'Banana USA', category: 'fruits', price: 0.79, description: 'Per unit', image: 'produceimages/bananausa.png' },
     { id: 5, name: 'Green Banana', category: 'fruits', price: 0.89, description: 'Per unit', image: 'produceimages/greenbanana.png' },
     { id: 6, name: 'Burro Banana', category: 'fruits', price: 1.29, description: 'Per unit', image: 'produceimages/burrobanana.png' },
@@ -373,8 +373,7 @@ const products = [
     { id: 371, name: 'Taro Leaf', category: 'vegetables', price: 3.99, description: 'Per bunch', image: 'produceimages/taroleaf.png' },
     { id: 372, name: 'Green Grass Jelly Leaf', category: 'vegetables', price: 3.99, description: 'Per bunch', image: 'produceimages/greengrassjellyleaf.png' },
     { id: 373, name: 'Daikon with Leaves', category: 'vegetables', price: 3.99, description: 'Per lb', image: 'produceimages/daikonwithleaves.png' },
-    { id: 374, name: 'Daikon with Leaves', category: 'vegetables', price: 3.99, description: 'Per lb', image: 'produceimages/daikonwithleaves.png' }
-
+    { id: 374, name: 'Daikon with Leaves', category: 'vegetables', price: 3.09, description: 'Per lb', image: 'produceimages/daikonwithleaves.png' }
 ];
 
 // Function to display products with description and price
