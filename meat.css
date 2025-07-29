@@ -195,3 +195,10 @@ body {
         font-size: 13px;
     }
 }
+.product-card img {
+  width: 200px;             /* 设置统一宽度 */
+  height: 200px;            /* 设置统一高度 */
+  object-fit: contain;      /* 保持原始比例，完整显示图片 */
+  display: block;
+  margin: 0 auto 10px auto; /* 居中显示，底部留空隙 */
+}

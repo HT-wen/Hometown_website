@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Center Navbar</title>
     <link rel="stylesheet" href="Events.css">
+
+<script src="scripts.js"></script>
 </head>
 <body>
     <header>
@@ -55,38 +57,128 @@
         <button class="scroll-button left" onclick="scrollLeft(1)">&#60;</button>
         <div class="scroll-container">
             <div class="new-arrivals-slider" id="row-1">
-                <div class="product-card">
-                    <img src="eventimages/HometownAug22flyer .png" alt="HometownAug22flyer" />
-                    <h3>Comedy Night</h3>
-                    <div class="brand">Date: August 22 8pm, 2025</div>
-                </div>
-                <div class="product-card">
-                    <img src="eventimages/craftevent.jpg" alt="Cooking Workshop" />
-                    <h3>Crafting Event</h3>
-                    <div class="brand">Date: June 8, 2024</div>
-                </div>
-                <div class="product-card">
-                    <img src="eventimages/even1.jpg" alt="Cooking Workshop" />
-                    <h3>Tennis League</h3>
-                    <div class="brand">Date: August 23 and 30, 2024</div>
-                </div>
-                <div class="product-card">
-                    <img src="eventimages/Happy Mother's Day Instagram Post.png" alt="Workshop" />
-                    <h3>Pipe cleaner flower</h3>
-                    <div class="brand">Date: MAY 10, 2025</div>
-                </div>
-                <div class="product-card">
-                    <img src="eventimages/dragonboat.jpg" alt="Workshop" />
-                    <h3>Water Marbling</h3>
-                    <div class="brand">Date: MAY 31, 2025</div>
-                </div>
-                <div class="product-card">
-                    <img src="communityimages/BHTT4.jpg" alt="Cooking Workshop" />
-                    <h3>Tennis Team League</h3>
-                    <div class="brand">Date: March 9th, 2023</div>
+               <style>
+                
+<div class="scroll-container-wrapper">
+  <button class="scroll-button left" onclick="scrollLeft(1)">&#60;</button>
+  
+  <div class="scroll-container">
+    <div class="new-arrivals-slider" id="row-1">
+
+    <style>
+        /* 弹窗整体遮罩 */
+        .modal {
+          display: none; /* 默认隐藏 */
+          position: fixed;
+          z-index: 1000;
+          left: 0; top: 0;
+          width: 100%; height: 100%;
+          background-color: rgba(0,0,0,0.8);
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        }
+
+        /* 弹窗内容：图片 */
+        .modal-content {
+          max-width: 90%;
+          max-height: 90%;
+          border-radius: 8px;
+        }
+
+        /* 点击关闭按钮样式 */
+        .close-btn {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          color: white;
+          font-size: 30px;
+          cursor: pointer;
+          user-select: none;
+          z-index: 1100;
+        }
+
+        /* 鼠标变成手形 */
+        .product-card img {
+          cursor: pointer;
+          border-radius: 8px;
+        }
+    </style>
+
+    <div class="product-card">
+        <img src="eventimages/HometownAug22flyer.png" alt="HometownAug22flyer" class="thumbnail" />
+        <h3>Comedy Night</h3>
+        <div class="brand">Date: August 22 8pm, 2025</div>
+    </div>
+
+
+    <div class="product-card">
+        <img src="eventimages/craftevent.jpg" alt="Cooking Workshop" class="thumbnail"/>
+        <h3>Crafting Event</h3>
+        <div class="brand">Date: June 8, 2024</div>
+    </div>
+
+     <div class="product-card">
+        <img src="eventimages/even1.jpg" alt="Cooking Workshop" class="thumbnail"/>
+        <h3>Tennis League</h3>
+        <div class="brand">Date: August 23 and 30, 2024</div>
+    </div>
+
+    <div class="product-card">
+        <img src="eventimages/Happy Mother's Day Instagram Post.png" alt="Workshop" class="thumbnail"/>
+        <h3>Pipe cleaner flower</h3>
+        <div class="brand">Date: MAY 10, 2025</div>
+    </div>
+
+    <div class="product-card">
+        <img src="eventimages/dragonboat.jpg" alt="Workshop" class="thumbnail"/>
+        <h3>Water Marbling</h3>
+        <div class="brand">Date: MAY 31, 2025</div>
+    </div>
+
+    <div class="product-card">
+        <img src="communityimages/BHTT4.jpg" alt="Cooking Workshop" class="thumbnail"/>
+        <h3>Tennis Team League</h3>
+    <div class="brand">Date: March 9th, 2023</div>
+
+      <!-- 仅有一个弹窗结构，放在 row-1 内即可 -->
+      <div id="modal" class="modal">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img class="modal-content" id="modalImage" src="" alt="大图预览" />
+      </div>
+
+      <script>
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // 绑定所有缩略图点击事件
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach(img => {
+          img.onclick = function() {
+            modal.style.display = 'flex';
+            modalImage.src = this.src;
+            modalImage.alt = this.alt || '大图预览';
+          };
+        });
+
+        closeBtn.onclick = function() {
+          modal.style.display = 'none';
+          modalImage.src = '';
+        };
+
+        modal.onclick = function(e) {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+            modalImage.src = '';
+          }
+        };
+      </script>
                 </div>
             </div>
         </div>
+        </script>
         <button class="scroll-button right" onclick="scrollRight(1)">&#62;</button>
     </div>
 </section>
