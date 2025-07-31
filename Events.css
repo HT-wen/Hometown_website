@@ -139,12 +139,16 @@ header .menu a:hover {
     overflow-y: hidden;
     white-space: nowrap;
     scroll-behavior: smooth;
-    height: 350px;
     display: flex;
-    gap: 15px;
-    padding: 0 40px 0 40px; /* LEFT and RIGHT padding added */
-    margin: 0 auto;
+    gap: 20px;
+    padding: 0 40px;
     width: 80%;
+    -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+    scrollbar-width: none;     /* Hide scrollbar Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
 }
 
 .new-arrivals-slider {
@@ -348,4 +352,54 @@ footer {
     .gallery-item {
         height: 150px;
     }
+}
+
+.scroll-gallery-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.scroll-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 180px);
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-gallery-container .gallery-item {
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-gallery-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scroll-gallery-container .gallery-item {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 180px;
+}
+
+
+.scroll-container-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: center;
 }
