@@ -180,18 +180,25 @@ document.querySelector('.menu-button').addEventListener('click', function() {
     menu.classList.toggle('open');
 });
 
-// 图片点击放大
-document.querySelectorAll('.thumbnail').forEach(img => {
-  img.addEventListener('click', () => {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    modal.style.display = 'flex';
-    modalImg.src = img.src;
-  });
-});
+window.onload = function () {
+  const modal = document.getElementById('modal');
+  const modalImage = document.getElementById('modalImage');
+  const thumbnail = document.getElementById('thumbnail');
+  const closeBtn = document.getElementById('closeBtn');
 
-// 关闭弹窗
-function closeModal() {
-  document.getElementById('imageModal').style.display = 'none';
-}
+  thumbnail.onclick = function () {
+    modal.style.display = 'flex';
+    modalImage.src = this.src;
+  };
+
+  closeBtn.onclick = function () {
+    modal.style.display = 'none';
+  };
+
+  modal.onclick = function (e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+};
 
