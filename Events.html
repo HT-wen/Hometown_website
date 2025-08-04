@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Center Navbar</title>
     <link rel="stylesheet" href="Events.css">
-
-<script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </head>
+
 <body>
     <header>
         <div class="header-container">
@@ -19,14 +20,15 @@
             </div>
             <nav>
                 <ul class="menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#new-arrivals">Upcoming Events</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="storefinder.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#new-arrivals">Upcoming Events</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="storefinder.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <!-- Video Section -->
     <section class="video-section">
         <video autoplay muted loop>
@@ -44,216 +46,130 @@
         </h1>
         <p class="welcome-subtext">A place to connect, learn, and grow together!</p>
     </div>
-    
-    
 
-</section>
-
-<section class="new-arrivals-section" id="new-arrivals">
-    <h2>Events</h2>
-
-    <!-- Row 1 -->
-    <div class="scroll-container-wrapper">
-        <button class="scroll-button left" onclick="scrollLeft(1)">&#60;</button>
-        <div class="scroll-container">
-            <div class="new-arrivals-slider" id="row-1">
-               <style>
-                
-<div class="scroll-container-wrapper">
-  <button class="scroll-button left" onclick="scrollLeft(1)">&#60;</button>
-  
-  <div class="scroll-container">
-    <div class="new-arrivals-slider" id="row-1">
-
-    <style>
-        /* 弹窗整体遮罩 */
-        .modal {
-          display: none; /* 默认隐藏 */
-          position: fixed;
-          z-index: 1000;
-          left: 0; top: 0;
-          width: 100%; height: 100%;
-          background-color: rgba(0,0,0,0.8);
-          justify-content: center;
-          align-items: center;
-          display: flex;
-        }
-
-        /* 弹窗内容：图片 */
-        .modal-content {
-          max-width: 90%;
-          max-height: 90%;
-          border-radius: 8px;
-        }
-
-        /* 点击关闭按钮样式 */
-        .close-btn {
-          position: absolute;
-          top: 30px;
-          right: 30px;
-          color: white;
-          font-size: 30px;
-          cursor: pointer;
-          user-select: none;
-          z-index: 1100;
-        }
-
-        /* 鼠标变成手形 */
-        .product-card img {
-          cursor: pointer;
-          border-radius: 8px;
-        }
-    </style>
-
-    <div class="product-card">
-        <img src="eventimages/HometownAug22flyer.png" alt="HometownAug22flyer" class="thumbnail" />
-        <h3>Comedy Night</h3>
-        <div class="brand">Date: August 22 8pm, 2025</div>
-    </div>
-
-    <div class="product-card">
-        <img src="eventimages/dragonboat.jpg" alt="Workshop" class="thumbnail"/>
-        <h3>Water Marbling</h3>
-        <div class="brand">Date: MAY 31, 2025</div>
-    </div>
-
-    <div class="product-card">
-        <img src="eventimages/Happy Mother's Day Instagram Post.png" alt="Workshop" class="thumbnail"/>
-        <h3>Pipe Cleaner Flower</h3>
-        <div class="brand">Date: MAY 10, 2025</div>
-    </div>
-
-    <div class="product-card">
-        <img src="eventimages/event1123.JPG" alt="Workshop" class="thumbnail"/>
-        <h3>Thanksgiving Crafting Event</h3>
-        <div class="brand">Date: Nov.23, 2024</div>
-    </div>
-
-    <div class="product-card">
-        <img src="eventimages/eventchinese.PNG" alt="Workshop" class="thumbnail"/>
-        <h3>Chinese Valentine's Day</h3>
-        <h3>Crafting Event</h3>
-        <div class="brand">Date: Aug 10, 2024</div>
-    </div>
-
-    <div class="product-card">
-        <img src="eventimages/craftevent.JPG" alt="Cooking Workshop" class="thumbnail"/>
-        <h3>Crafting Event</h3>
-        <div class="brand">Date: June 8, 2024</div>
-    </div>
-
-    <div class="product-card">
-        <img src="eventimages/event_father.JPG" alt="Workshop" class="thumbnail"/>
-        <h3>Crafting Event</h3>
-        <div class="brand">Date: June 15, 2024</div>
-    </div>
-
-    <div class="product-card">
-        <img src="eventimages/eventmother.JPG" alt="Workshop" class="thumbnail"/>
-        <h3>Crafting Event</h3>
-        <div class="brand">Date: May 11 and 12, 2024</div>
-    </div>
-
-    <div class="product-card">
-        <img src="eventimages/even1.jpg" alt="Cooking Workshop" class="thumbnail"/>
-        <h3>Cooking Class</h3>
-        <div class="brand">Date: August 23 and 30, 2024</div>
-    </div>
-
-    <div class="product-card">
-        <img src="communityimages/BHTT4.jpg" alt="Cooking Workshop" class="thumbnail"/>
-        <h3>Tennis Team League</h3>
-    <div class="brand">Date: March 9th, 2023</div>
-
-      <!-- 仅有一个弹窗结构，放在 row-1 内即可 -->
-      <div id="modal" class="modal">
-        <span class="close-btn" id="closeBtn">&times;</span>
-        <img class="modal-content" id="modalImage" src="" alt="大图预览" />
+    <!-- Events Section -->
+    <section class="new-arrivals-section" id="new-arrivals">
+      <h2>Events</h2>
+      <div class="scroll-container-wrapper">
+          <button class="scroll-button left" onclick="scrollLeft(1)">&#60;</button>
+          <div class="scroll-container" id="row-1">
+              <div class="product-card">
+                  <img src="eventimages/HometownAug22flyer.png" alt="Comedy Night" class="thumbnail" />
+                  <h3>Comedy Night</h3>
+                  <div class="brand">Date: August 22, 2025</div>
+              </div>
+              <div class="product-card">
+                  <img src="eventimages/dragonboat.jpg" alt="Water Marbling" class="thumbnail" />
+                  <h3>Water Marbling</h3>
+                  <div class="brand">Date: May 31, 2025</div>
+              </div>
+              <div class="product-card">
+                  <img src="eventimages/Happy Mother's Day Instagram Post.png" alt="Pipe Cleaner Flower" class="thumbnail" />
+                  <h3>Pipe Cleaner Flower</h3>
+                  <div class="brand">Date: May 10, 2025</div>
+              </div>
+              <div class="product-card">
+                  <img src="eventimages/event1123.JPG" alt="Thanksgiving Crafting" class="thumbnail" />
+                  <h3>Thanksgiving Crafting Event</h3>
+                  <div class="brand">Date: Nov 23, 2024</div>
+              </div>
+              <div class="product-card">
+                  <img src="eventimages/eventchinese.PNG" alt="Chinese Valentine's Day" class="thumbnail" />
+                  <h3>Chinese Valentine's Day</h3>
+                  <h3>Crafting Event</h3>
+                  <div class="brand">Date: Aug 10, 2024</div>
+              </div>
+              <div class="product-card">
+                  <img src="eventimages/craftevent.jpg" alt="Crafting Event" class="thumbnail" />
+                  <h3>Crafting Event</h3>
+                  <div class="brand">Date: June 8, 2024</div>
+              </div>
+              <div class="product-card">
+                  <img src="eventimages/event_father.JPG" alt="Father's Day Crafting" class="thumbnail" />
+                  <h3>Crafting Event</h3>
+                  <div class="brand">Date: June 15, 2024</div>
+              </div>
+              <div class="product-card">
+                  <img src="eventimages/eventmother.JPG" alt="Mother's Day Crafting" class="thumbnail" />
+                  <h3>Crafting Event</h3>
+                  <div class="brand">Date: May 11 and 12, 2024</div>
+              </div>
+              <div class="product-card">
+                  <img src="eventimages/even1.jpg" alt="Cooking Class" class="thumbnail" />
+                  <h3>Cooking Class</h3>
+                  <div class="brand">Date: August 23 and 30, 2024</div>
+              </div>
+          </div>
+          <button class="scroll-button right" onclick="scrollRight(1)">&#62;</button>
       </div>
+  </section>
+  
 
-      <script>
-        const modal = document.getElementById('modal');
-        const modalImage = document.getElementById('modalImage');
-        const closeBtn = document.getElementById('closeBtn');
-
-        // 绑定所有缩略图点击事件
-        const thumbnails = document.querySelectorAll('.thumbnail');
-
-        thumbnails.forEach(img => {
-          img.onclick = function() {
-            modal.style.display = 'flex';
-            modalImage.src = this.src;
-            modalImage.alt = this.alt || '大图预览';
-          };
-        });
-
-        closeBtn.onclick = function() {
-          modal.style.display = 'none';
-          modalImage.src = '';
-        };
-
-        modal.onclick = function(e) {
-          if (e.target === modal) {
-            modal.style.display = 'none';
-            modalImage.src = '';
-          }
-        };
-      </script>
-                </div>
-            </div>
-        </div>
-        </script>
-        <button class="scroll-button right" onclick="scrollRight(1)">&#62;</button>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img class="modal-content" id="modalImage" src="" alt="Preview Image" />
     </div>
-</section>
-<section class="gallery-section" id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-container">
-        <div class="gallery-item">
-            <img src="eventimages/event10.png" alt="Gallery Image 1">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/event11.JPG" alt="Gallery Image 2">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/event12.png" alt="Gallery Image 3">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/event13.JPG" alt="Gallery Image 4">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/event14.jpg" alt="Gallery Image 5">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/event7.jpg" alt="Gallery Image 6">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/event15.JPG" alt="Gallery Image 6">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/eventnewyear.jpg" alt="Gallery Image 6">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/eventpicture1.jpg" alt="Gallery Image 6">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/eventpicture2.jpg" alt="Gallery Image 6">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/eventpicture3.jpg" alt="Gallery Image 6">
-        </div>
-        <div class="gallery-item">
-            <img src="eventimages/eventpicture4.jpg" alt="Gallery Image 6">
-        </div>
-    </div>
-</section>
 
-<footer>
+    <!-- Gallery Section -->
+    <!-- <section class="gallery-section" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="eventimages/event10.png" alt="Gallery Image 1"></div>
+            <div class="gallery-item"><img src="eventimages/event11.JPG" alt="Gallery Image 2"></div>
+            <div class="gallery-item"><img src="eventimages/event12.png" alt="Gallery Image 3"></div>
+            <div class="gallery-item"><img src="eventimages/event13.JPG" alt="Gallery Image 4"></div>
+            <div class="gallery-item"><img src="eventimages/event14.jpg" alt="Gallery Image 5"></div>
+            <div class="gallery-item"><img src="eventimages/event7.jpg" alt="Gallery Image 6"></div>
+            <div class="gallery-item"><img src="eventimages/event15.JPG" alt="Gallery Image 7"></div>
+            <div class="gallery-item"><img src="eventimages/eventnewyear.jpg" alt="Gallery Image 8"></div>
+            <div class="gallery-item"><img src="eventimages/eventpicture1.jpg" alt="Gallery Image 9"></div>
+            <div class="gallery-item"><img src="eventimages/eventpicture2.jpg" alt="Gallery Image 10"></div>
+            <div class="gallery-item"><img src="eventimages/eventpicture3.jpg" alt="Gallery Image 11"></div>
+            <div class="gallery-item"><img src="eventimages/eventpicture4.jpg" alt="Gallery Image 12"></div>
+        </div>
+    </section> -->
+
+    <section class="gallery-section" id="gallery">
+      <h2>Gallery</h2>
+      <div class="scroll-gallery-wrapper">
+          <button class="scroll-button left" onclick="scrollLeftGallery()">&#60;</button>
+          <div class="scroll-gallery-container" id="gallery-scroll">
+              <div class="gallery-item"><img src="eventimages/event10.png" alt="Gallery Image 1"></div>
+              <div class="gallery-item"><img src="eventimages/event11.JPG" alt="Gallery Image 2"></div>
+              <div class="gallery-item"><img src="eventimages/event12.png" alt="Gallery Image 3"></div>
+              <div class="gallery-item"><img src="eventimages/event13.JPG" alt="Gallery Image 4"></div>
+              <div class="gallery-item"><img src="eventimages/event14.JPG" alt="Gallery Image 5"></div>
+              <div class="gallery-item"><img src="eventimages/event7.jpg" alt="Gallery Image 6"></div>
+              <div class="gallery-item"><img src="eventimages/event15.JPG" alt="Gallery Image 7"></div>
+              <div class="gallery-item"><img src="eventimages/eventnewyear.jpg" alt="Gallery Image 8"></div>
+              <div class="gallery-item"><img src="eventimages/eventpicture1.jpg" alt="Gallery Image 9"></div>
+              <div class="gallery-item"><img src="eventimages/eventpicture2.jpg" alt="Gallery Image 10"></div>
+              <div class="gallery-item"><img src="eventimages/eventpicture3.jpg" alt="Gallery Image 11"></div>
+              <div class="gallery-item"><img src="eventimages/eventpicture4.jpg" alt="Gallery Image 12"></div>
+              <div class="gallery-item"><img src="eventimages/event10.png" alt="Gallery Image 1"></div>
+              <div class="gallery-item"><img src="eventimages/event11.JPG" alt="Gallery Image 2"></div>
+              <div class="gallery-item"><img src="eventimages/event12.png" alt="Gallery Image 3"></div>
+              <div class="gallery-item"><img src="eventimages/event13.JPG" alt="Gallery Image 4"></div>
+              <div class="gallery-item"><img src="eventimages/event14.jpg" alt="Gallery Image 5"></div>
+              <div class="gallery-item"><img src="eventimages/event7.jpg" alt="Gallery Image 6"></div>
+              <div class="gallery-item"><img src="eventimages/event15.JPG" alt="Gallery Image 7"></div>
+              <div class="gallery-item"><img src="eventimages/eventnewyear.jpg" alt="Gallery Image 8"></div>
+              <div class="gallery-item"><img src="eventimages/eventpicture1.jpg" alt="Gallery Image 9"></div>
+              <div class="gallery-item"><img src="eventimages/eventpicture2.jpg" alt="Gallery Image 10"></div>
+              <div class="gallery-item"><img src="eventimages/eventpicture3.jpg" alt="Gallery Image 11"></div>
+          </div>
+          <button class="scroll-button right" onclick="scrollRightGallery()">&#62;</button>
+      </div>
+  </section>
+  
+
+
+
+    <footer>
         <p>&copy; 2024 Hometown Supermarket. All rights reserved.</p>
     </footer>
-    <script src="Events.js"></script
+
+    <script src="Events.js"></script>
 </body>
 </html>
-
-    
-  

@@ -1130,3 +1130,23 @@ button.next:hover {
         justify-content: center;
     }
 }
+
+.product-card.sold-out {
+    position: relative;
+    opacity: 0.6; /* optional: dim the card */
+}
+
+.product-card.sold-out::after {
+    content: "Sold Out";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 2;
+}

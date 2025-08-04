@@ -34,25 +34,26 @@
             <h2>Recipe Videos</h2>
             <div class="video-container">
                 <div class="video-card">
-                    <iframe src="kungpao.mp4" title="Recipe Video 1" allowfullscreen></iframe>
-                    <h3>Kung pao chicken</h3>
+                    <video src="kungpao.mp4" controls></video>
+                    <h3>Kung Pao Chicken</h3>
                     <p>Quick description of Recipe 1.</p>
                 </div>
                 <div class="video-card">
-                    <iframe src="Hotpot.mp4" title="Recipe Video 2" allowfullscreen></iframe>
+                    <video src="Hotpot.mp4" controls></video>
                     <h3>Hotpot</h3>
                     <p>Quick description of Recipe 2.</p>
                 </div>
                 <div class="video-card">
-                    <iframe src="THANKSGIVING (1).mp4" title="Recipe Video 3" allowfullscreen></iframe>
-                    <h3>Chocolate strawberry</h3>
+                    <video src="THANKSGIVING (1).mp4" controls></video>
+                    <h3>Chocolate Strawberry</h3>
                     <p>Quick description of Recipe 3.</p>
                 </div>
                 <div class="video-card">
-                    <iframe src="Reciepevideo.mp4" title="Recipe Video 4" allowfullscreen></iframe>
+                    <video src="Reciepevideo.mp4" controls></video>
                     <h3>Recipe Name 4</h3>
                     <p>Quick description of Recipe 4.</p>
                 </div>
+                
             </div>
         </section>
     </main>
@@ -60,5 +61,22 @@
     <footer>
         <p>&copy; 2024 Hometown Supermarket. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videos = document.querySelectorAll('video');
+        
+            videos.forEach(video => {
+                video.addEventListener('play', () => {
+                    videos.forEach(v => {
+                        if (v !== video) {
+                            v.pause();
+                        }
+                    });
+                });
+            });
+        });
+        </script>
+        
 </body>
 </html>
