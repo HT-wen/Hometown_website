@@ -115,3 +115,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render
     renderGalleryPage();
 });
+<<<<<<< HEAD
+
+window.onload = function () {
+  const modal = document.getElementById('modal');
+  const modalImage = document.getElementById('modalImage');
+  const thumbnail = document.getElementById('thumbnail');
+  const closeBtn = document.getElementById('closeBtn');
+
+  thumbnail.onclick = function () {
+    modal.style.display = 'flex';
+    modalImage.src = this.src;
+  };
+
+  closeBtn.onclick = function () {
+    modal.style.display = 'none';
+  };
+
+  modal.onclick = function (e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  };
+};
+
+=======
+>>>>>>> 53d78e836151602cb4267ad806c748a729543f45
