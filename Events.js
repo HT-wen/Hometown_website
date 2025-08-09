@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render
     renderGalleryPage();
 });
-<<<<<<< HEAD
 
 window.onload = function () {
   const modal = document.getElementById('modal');
@@ -139,5 +138,3 @@ window.onload = function () {
   };
 };
 
-=======
->>>>>>> 53d78e836151602cb4267ad806c748a729543f45
