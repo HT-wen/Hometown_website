@@ -158,40 +158,55 @@ header .menu a:hover {
 
 .product-card {
     flex: 0 0 auto;
-    width: 220px;
+    width: 240px; /* slightly wider */
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 15px; /* reduced padding for tighter look */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 15px;
+    margin-right: 20px; /* space between cards */
 }
 
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 .product-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin-bottom: 10px;
+    width: 180px; 
+    height: 140px; 
+    object-fit: cover; 
+    margin-bottom: 12px;
+    border-radius: 8px; 
     
+}
+
+.product-card img:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
 }
 
 .product-card .brand {
     font-size: 14px;
     color: #4CAF50;
-    margin-bottom: 5px;
+    margin-top: 4px;
+    margin-bottom: 0;
 }
 
 .product-card h3 {
     font-size: 16px;
     color: #333;
-    margin-bottom: 8px;
+    margin: 5px 0;
 }
 
-.product-card:hover {
+/* .product-card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .scroll-button {
     background-color: white;
