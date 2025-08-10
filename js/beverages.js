@@ -1,11 +1,11 @@
 // Sample product data for Beverages
 const products = [
-    { id: 1, name: 'Coca-Cola', category: 'soft-drinks', price: 1.50, description: '12 oz can', image: 'beverageimages/cocacola.png' },
-    { id: 2, name: 'Aloe', category: 'juices', price: 3.99, description: '1L bottle', image: 'beverageimages/aloe.png' },
-    { id: 3, name: 'Basil seed', category: 'water', price: 0.99, description: '500ml bottle', image: 'beverageimages/basil.png' },
-    { id: 4, name: 'Pineapple', category: 'soft-drinks', price: 1.50, description: '12 oz can', image: 'beverageimages/pineapple.png' },
-    { id: 5, name: 'Yoga vera', category: 'juices', price: 4.50, description: '1L bottle', image: 'beverageimages/yoga vera.png' },
-    { id: 6, name: 'Yogurt', category: 'juices', price: 4.50, description: '1L bottle', image: 'beverageimages/yogurt.png' }
+    { id: 1, name: 'Coca-Cola', category: 'soft-drinks', price: 1.50, description: '12 oz can', image: '../pictures/beverageimages/cocacola.png' },
+    { id: 2, name: 'Aloe', category: 'juices', price: 3.99, description: '1L bottle', image: '../pictures/beverageimages/aloe.png' },
+    { id: 3, name: 'Basil seed', category: 'water', price: 0.99, description: '500ml bottle', image: '../pictures/beverageimages/basil.png' },
+    { id: 4, name: 'Pineapple', category: 'soft-drinks', price: 1.50, description: '12 oz can', image: '../pictures/beverageimages/pineapple.png' },
+    { id: 5, name: 'Yoga vera', category: 'juices', price: 4.50, description: '1L bottle', image: '../pictures/beverageimages/yoga vera.png' },
+    { id: 6, name: 'Yogurt', category: 'juices', price: 4.50, description: '1L bottle', image: '../pictures/beverageimages/yogurt.png' }
 ];
 
 // Function to display products with description and price
