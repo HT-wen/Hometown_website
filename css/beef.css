@@ -44,7 +44,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('restaurantimages/B1\ Beef\ w\ broccoli.JPG') no-repeat center center/cover;
+    background: url('../pictures/restaurantimages/B1\ Beef\ w\ broccoli.JPG') no-repeat center center/cover;
     height: 50vh;
     display: flex;
     justify-content: center;
