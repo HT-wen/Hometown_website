@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Images/Hometown logo.png" type="image/x-icon">
     <title>Hometown Supermarket</title>
-    <link rel="stylesheet" href="../css/search.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
           <!-- -------FontAwesome Link------- -->
           <link
@@ -37,7 +36,6 @@
         <div class="search-bar-container">
             <input type="text" class="search-bar" id="search-bar" placeholder="Search for products, categories, and more" onfocus="showSearchResults()" onblur="hideSearchResults()">
             <div class="search_results_box mobile_hide">
-                <ul id="results"></ul>
                 <div class="Item">
                     <h2>Categories</h2>
                     <div class="grid">
@@ -143,7 +141,6 @@
         <i class="fa-solid fa-search"></i>
 
         <div class="search_results_box mobile_search_results">
-            
             <div class="Item">
                 <h2>Categories</h2>
                 <div class="grid">
@@ -1430,7 +1427,6 @@ xmark.addEventListener("click",function(){
         mobile_search_results.classList.toggle("active")
     })
       </script>
-    <script src="../js/script.js"></script>
-    <script src="../js/search.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

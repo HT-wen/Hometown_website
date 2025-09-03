@@ -65,9 +65,6 @@ body,html{
     left: 50%;transform: translateX(-50%);
     top: 47px;width: 70%;z-index: 4;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    
-    /* create stacking context for the dropdown */
-    overflow: visible !important;
 }
  .search_results_box.active{
     display: block;
