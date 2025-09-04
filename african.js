@@ -376,51 +376,69 @@ const products = [
 
 ];
 
-// Function to display products with description and price
-function displayProducts(productsToDisplay) {
+  
+  // ===== Render =====
+  function displayProducts(productsToDisplay) {
     const productList = document.getElementById('product-list');
-    productList.innerHTML = ''; // Clear previous products
-    productsToDisplay.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.classList.add('product-item');
-        productDiv.innerHTML = `
-              <img src="${product.image}" alt="${product.name}">
-            <h4>${product.name}</h4>
-            <p class="price">$${product.price.toFixed(2)}</p>
-            <p class="description">${product.description}</p>
-            
-        `;
-        productList.appendChild(productDiv);
+    if (!productList) return;
+  
+    productList.innerHTML = '';
+    productsToDisplay.forEach((product) => {
+      const productDiv = document.createElement('div');
+      productDiv.classList.add('product-item');
+      productDiv.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" loading="lazy" decoding="async">
+        <h4>${product.name}</h4>
+        <p class="price">$${Number(product.price).toFixed(2)}</p>
+        <p class="description">${product.description}</p>
+      `;
+      productList.appendChild(productDiv);
     });
-}
-
-// Initial display of all products
-displayProducts(products);
-
-// Price Label Update
-function updatePriceLabel(value) {
-    document.getElementById('price-label').textContent = `$${value}`;
-}
-
-// Filter Functionality
-document.getElementById('price-range').addEventListener('input', function() {
-    filterProducts();
-});
-
-document.getElementById('category-filter').addEventListener('change', function() {
-    filterProducts();
-});
-
-// Filtering products by price and category
-function filterProducts() {
-    const priceLimit = parseFloat(document.getElementById('price-range').value);
-    const selectedCategory = document.getElementById('category-filter').value;
-
-    const filteredProducts = products.filter(product => {
-        const priceMatch = product.price <= priceLimit;
-        const categoryMatch = selectedCategory === 'all' || product.category === selectedCategory;
-        return priceMatch && categoryMatch;
+  }
+  
+  // ===== Filters =====
+  function updatePriceLabel(value) {
+    const label = document.getElementById('price-label');
+    if (label) label.textContent = `$${value}`;
+  }
+  
+  function filterProducts() {
+    const priceRange = document.getElementById('price-range');
+    const categorySelect = document.getElementById('category-filter');
+    const priceLimit = priceRange ? parseFloat(priceRange.value) : 50;
+    const selectedCategory = categorySelect ? categorySelect.value : 'all';
+  
+    const filtered = products.filter((product) => {
+      const priceMatch = Number(product.price) <= priceLimit;
+      // NOTE: There is a data entry typo: one item has category 'fruitsi'.
+      // We are not changing data here. If approved, we can fix the data entry in a later pass.
+      const category = String(product.category || '').toLowerCase();
+      const categoryMatch =
+        selectedCategory === 'all' || category === selectedCategory;
+      return priceMatch && categoryMatch;
     });
-
-    displayProducts(filteredProducts); // Display filtered products
-}
+  
+    displayProducts(filtered);
+  }
+  
+  // ===== Init =====
+  (function initAfricanPage() {
+    // Initial render
+    displayProducts(products);
+  
+    // Wire filters safely
+    const priceRange = document.getElementById('price-range');
+    const categorySelect = document.getElementById('category-filter');
+  
+    if (priceRange) {
+      priceRange.addEventListener('input', () => {
+        updatePriceLabel(priceRange.value);
+        filterProducts();
+      });
+    }
+  
+    if (categorySelect) {
+      categorySelect.addEventListener('change', filterProducts);
+    }
+  })();
+  
