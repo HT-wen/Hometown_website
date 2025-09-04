@@ -1,3 +1,6 @@
+/* Utility: hide element without affecting layout elsewhere */
+.is-hidden { display: none !important; }
+
 /* General styling... */
 *{
     margin: 0;padding: 0;
