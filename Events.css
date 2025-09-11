@@ -186,10 +186,10 @@ header .menu a:hover {
 
 
 .product-card img {
-    width: 100%;               /* fill card width */
-    height: auto;              /* scale proportionally */
-    max-height: 200px;         /* prevents super tall images */
-    object-fit: contain;       /* show entire flyer neatly */
+    width: 100%;               
+    height: auto;             
+    max-height: 200px;        
+    object-fit: contain;      
     margin-bottom: 12px;
     border-radius: 8px;
     cursor: zoom-in; 

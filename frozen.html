@@ -6,6 +6,8 @@
     <title>Hometown Supermarket</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="frozen.css">
+    <link rel="stylesheet" href="lightbox.css">
+
           <!-- -------FontAwesome Link------- -->
           <link
           rel="stylesheet"
@@ -395,6 +397,9 @@
 
     <script src="script.js"></script>
     <script src="frozen.js"></script>
+    <script src="lightbox.js"></script>
+
+
     <script>
         const menu_bar = document.querySelector(".mobile_show i")
         const xmark = document.querySelector("#xmark")
@@ -419,6 +424,16 @@ xmark.addEventListener("click",function(){
         mobile_search_results.classList.toggle("active")
     })
     </script>
+
+    <!-- Image Lightbox Modal -->
+<div id="modal" class="modal">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img class="modal-content" id="modalImage" src="" alt="Preview Image" />
+  </div>
+  
+
+
+
 </body>
 </html>
 

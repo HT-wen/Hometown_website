@@ -8,6 +8,7 @@
   <!-- CSS (global first, then page-specific) -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="african.css" />
+  <link rel="stylesheet" href="lightbox.css"/>
 
   <!-- FontAwesome -->
   <link
@@ -432,6 +433,7 @@
   <!-- JS (global first, then page-specific) -->
   <script src="script.js"></script>
   <script src="african.js"></script>
+  <script src="lightbox.js"></script>
 
   <!-- Keep small page glue here to avoid breaking behavior; we’ll migrate to african.js later -->
   <script>
@@ -460,5 +462,11 @@
       searchMobileBar.addEventListener("click", () => mobileSearchResults.classList.toggle("active"));
     }
   </script>
+
+<div id="modal" class="modal">
+  <span class="close-btn" id="closeBtn">&times;</span>
+  <img class="modal-content" id="modalImage" src="" alt="Preview Image" />
+</div>
+
 </body>
 </html>

@@ -1,8 +1,6 @@
 // Sample product data with images, prices, and descriptions
 const products = [
-<<<<<<< HEAD
-    { id: 1, name: 'Basmati', category: 'rice', price: 22, description: 'Price per piece', image: 'grainimages/basmati.png' }
-=======
+
     { id: 1, name: 'ROYAL BASMATHI RICE (20 LB)', category: 'rice', price: 26, description: 'Price per piece', image: 'grainimages/ROYAL BASMATHI RICE (20 LB).jpg' },
     { id: 2, name: '2025 NEW CROP THREE LADIES JASMINE RICE (25 lb)', category: 'rice', price: 35, description: 'Price per piece', image: 'grainimages/2025 NEW CROP THREE LADIES JASMINE RICE (25 lb).jpg' },
     { id: 3, name: 'SUKOYAKA GENMAI GRAIN BROWN RICE (15 LB)', category: 'rice', price: 25.98, description: 'Price per piece', image: 'grainimages/SUKOYAKA GENMAI GRAIN BROWN RICE (15 LB).jpg' },
@@ -39,8 +37,6 @@ const products = [
 { id: 34, name: '2025 NEW CROP RHEE CHUN FANCY VARIETY RICE (40 LB)', category: 'rice', price: 36, description: 'Price per piece', image: 'grainimages/2025 NEW CROP RHEE CHUN FANCY VARIETY RICE (40 LB).jpg' },
 { id: 35, name: 'RHEE CHUN FANCY SUSHI RICE (15 LB)', category: 'rice', price: 13.98, description: 'Price per piece', image: 'grainimages/RHEE CHUN FANCY SUSHI RICE (15 LB).jpg' },
 
-    
->>>>>>> bc1b52f (Meat update)
 ];
 
 // Function to display products with description and price
