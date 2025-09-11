@@ -6,6 +6,7 @@
     <link rel="icon" href="Images/Hometown logo.png" type="image/x-icon">
     <title>Hometown Supermarket</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
           <!-- -------FontAwesome Link------- -->
           <link
@@ -1428,5 +1429,13 @@ xmark.addEventListener("click",function(){
     })
       </script>
     <script src="script.js"></script>
+    <script src="lightbox.js"></script>
+
+    <div id="modal" class="modal">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img class="modal-content" id="modalImage" src="" alt="Preview Image" />
+      </div>
+      
+
 </body>
 </html>
