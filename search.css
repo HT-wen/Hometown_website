@@ -1,0 +1,102 @@
+/* Hide category box when results are shown */
+#results:not(:empty) ~ .search_results_box {
+  display: none;
+}
+
+
+
+/* The container anchors the absolute dropdown */
+.search-bar-container {
+  position: relative;
+}
+
+/* Results list (hidden by default; JS toggles display) */
+#results {
+  position: absolute;
+  top: calc(100% + 8px);   /* sit just below the input */
+  left: 0;
+  width: 100%;             /* match the search input width */
+  display: none;           /* JS sets to block */
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  max-height: 320px;       /* scroll if long */
+  overflow: auto;
+
+  box-shadow: 0 10px 30px rgba(40, 40, 40, 0.12);
+  z-index: 10000;          /* above nav/video */
+}
+
+/* Optional utility if you ever want CSS-only control */
+#results.has-results { display: block; }
+
+#results li {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  cursor: pointer;
+  line-height: 1.2;
+  color: #334155;          /* slightly darker for readability */
+}
+
+#results li:last-child { border-bottom: none; }
+
+#results li:hover { background: #f8fafc; }
+
+#results li.empty {
+  color: #64748b;
+  cursor: default;
+}
+
+
+/* Make the dropdown match the search input width */
+.search-bar-container {
+  position: relative;
+  display: inline-block;       /* keeps it snug around the input */
+}
+
+#results {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;                 /* matches the input width now */
+  max-width: 450px;            /* optional cap */
+}
+
+
+#results {
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+
+#results {
+  z-index: 10;      
+}
+
+/* Make the search container shrink-wrap the input */
+.top-nav .search-bar-container {
+  position: relative;
+  display: inline-block;   /* shrink to content */
+  width: max-content;      /* or: width: fit-content; */
+  flex: 0 0 auto;          /* don't let flex stretch it */
+}
+
+/* Set your desired input width (adjust as you like) */
+.top-nav .search-bar {
+  width: 750px;            /* <- tweak this number */
+}
+
+/* Align dropdown to the input */
+#results {
+  left: 0;                 /* anchor to input's left edge */
+  right: auto;
+  width: 100%;             /* same width as the input */
+  top: calc(100% + 6px);   /* small gap under the input */
+}
+
+/* Ensure the category box stays hidden while searching */
+#results:not(:empty) ~ .search_results_box { display: none; }

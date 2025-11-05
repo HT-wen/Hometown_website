@@ -1153,3 +1153,96 @@ button.next:hover {
     font-size: 16px;
     z-index: 2;
 }
+
+/* =========================
+   Image Zoom (card + viewer)
+   ========================= */
+
+/* In-card hover zoom */
+.product-item .img-wrap{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+  }
+  
+  .product-item .img-wrap img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    transition: transform 0.15s ease, transform-origin 0.1s ease;
+    will-change: transform;
+  }
+  
+  .product-item .img-wrap:hover{ cursor: zoom-in; }
+  
+  /* Fullscreen viewer (modal) */
+  #imgViewerOverlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.75);
+    display: none;               /* toggled via JS */
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;              /* higher than .top-nav (999) and .nav-bar (998) */
+  }
+  
+  #imgViewer{
+    position: relative;
+    background: #111;
+    border-radius: 10px;
+    max-width: min(92vw, 1100px);
+    width: min(92vw, 1100px);
+    height: min(82vh, 800px);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    touch-action: none;          /* enables pinch/drag */
+  }
+  
+  #imgStage{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform-origin: center center; /* JS updates translate/scale on this */
+  }
+  
+  #imgStage img{
+    max-width: 100%;
+    max-height: 100%;
+    user-select: none;
+    pointer-events: none;        /* stage handles drag/pinch */
+  }
+  
+  #imgViewerControls{
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  
+  #imgViewerControls button,
+  #imgViewerClose{
+    background: #1f1f1f;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  #imgViewerClose{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  
+  /* Small screens */
+  @media (max-width: 768px){
+    #imgViewer{ width: 96vw; height: 78vh; }
+  }
+  
