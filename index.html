@@ -6,6 +6,7 @@
     <link rel="icon" href="Images/Hometown logo.png" type="image/x-icon">
     <title>Hometown Supermarket</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="lightbox.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
           <!-- -------FontAwesome Link------- -->
@@ -19,7 +20,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-</head>
 </head>
 <body onload="switchLanguage('en')">
 
@@ -36,6 +36,7 @@
 
         <div class="search-bar-container">
             <input type="text" class="search-bar" id="search-bar" placeholder="Search for products, categories, and more" onfocus="showSearchResults()" onblur="hideSearchResults()">
+            <ul id="results"></ul>
             <div class="search_results_box mobile_hide">
                 <div class="Item">
                     <h2>Categories</h2>
@@ -1365,12 +1366,13 @@
       <div class="footer-section">
         <h3>Follow Us</h3>
         <div class="social-links">
-          <a href="https://www.facebook.com/HometownSupermarketBHM" target="_blank">
-            <img src="images/facebook.png" alt="Facebook">
-          </a>
-          <a href="https://www.instagram.com/hometown_supermarket_888/" target="_blank">
-            <img src="images/instagram.png" alt="Instagram">
-          </a>
+            <a href="https://www.facebook.com/HometownSupermarketBHM" target="_blank">
+                <img src="Images/facebook.png" alt="Facebook">
+              </a>
+              <a href="https://www.instagram.com/hometown_supermarket_888/" target="_blank">
+                <img src="Images/instagram.png" alt="Instagram">
+              </a>
+              
         </div>
       </div>
     </div>
@@ -1429,6 +1431,7 @@ xmark.addEventListener("click",function(){
     })
       </script>
     <script src="script.js"></script>
+    <script src="search.js"></script>
     <script src="lightbox.js"></script>
 
     <div id="modal" class="modal">
