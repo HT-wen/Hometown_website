@@ -375,51 +375,67 @@ const products = [
     { id: 373, name: 'Daikon with Leaves', category: 'vegetables', price: 3.99, description: 'Per lb', image: 'produceimages/daikonwithleaves.png' }
 ];
 
-// Function to display products with description and price
-function displayProducts(productsToDisplay) {
-    const productList = document.getElementById('product-list');
-    productList.innerHTML = ''; // Clear previous products
-    productsToDisplay.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.classList.add('product-item');
-        productDiv.innerHTML = `
-              <img src="${product.image}" alt="${product.name}">
-            <h4>${product.name}</h4>
-            <p class="price">$${product.price.toFixed(2)}</p>
-            <p class="description">${product.description}</p>
-            
-        `;
-        productList.appendChild(productDiv);
-    });
+// --- helpers ---
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+// Price label live update
+function updatePriceLabel(value) {
+  $('#price-label').textContent = `$${Number(value).toFixed(0)}`;
 }
 
-// Initial display of all products
+// Render products using <template>
+function displayProducts(productsToDisplay) {
+  const list = $('#product-list');
+  list.innerHTML = '';
+
+  if (!productsToDisplay.length) {
+    const msg = list.dataset.emptyText || 'No products match your filters.';
+    list.innerHTML = `<p class="empty">${msg}</p>`;
+    return;
+  }
+
+  const tpl = $('#product-card');
+
+  productsToDisplay.forEach(p => {
+    const node = tpl.content.firstElementChild.cloneNode(true);
+
+    const img = $('img', node);
+    img.src = p.image;
+    img.alt = p.name;
+    img.loading = 'lazy';
+    // store a full-size path if you have it; otherwise same as thumb
+    img.dataset.full = p.image;
+
+    $('h4', node).textContent = p.name;
+    $('.price', node).textContent = `$${p.price.toFixed(2)}`;
+    $('.description', node).textContent = p.description;
+
+    list.appendChild(node);
+  });
+}
+
+// Filters
+function filterProducts() {
+  const priceLimit = parseFloat($('#price-range').value);
+  const category = $('#category-filter').value;
+
+  const filtered = products.filter(p => {
+    const priceMatch = p.price <= priceLimit;
+    const categoryMatch = category === 'all' || p.category === category;
+    return priceMatch && categoryMatch;
+  });
+
+  displayProducts(filtered);
+}
+
+// Init
+updatePriceLabel($('#price-range').value);
 displayProducts(products);
 
-// Price Label Update
-function updatePriceLabel(value) {
-    document.getElementById('price-label').textContent = `$${value}`;
-}
-
-// Filter Functionality
-document.getElementById('price-range').addEventListener('input', function() {
-    filterProducts();
+// Events
+$('#price-range').addEventListener('input', e => {
+  updatePriceLabel(e.target.value);
+  filterProducts();
 });
-
-document.getElementById('category-filter').addEventListener('change', function() {
-    filterProducts();
-});
-
-// Filtering products by price and category
-function filterProducts() {
-    const priceLimit = parseFloat(document.getElementById('price-range').value);
-    const selectedCategory = document.getElementById('category-filter').value;
-
-    const filteredProducts = products.filter(product => {
-        const priceMatch = product.price <= priceLimit;
-        const categoryMatch = selectedCategory === 'all' || product.category === selectedCategory;
-        return priceMatch && categoryMatch;
-    });
-
-    displayProducts(filteredProducts); // Display filtered products
-}
+$('#category-filter').addEventListener('change', filterProducts);

@@ -1245,4 +1245,7 @@ button.next:hover {
   @media (max-width: 768px){
     #imgViewer{ width: 96vw; height: 78vh; }
   }
-  
+
+  /* In style.css */
+.search-results.show { display: block; }
+
